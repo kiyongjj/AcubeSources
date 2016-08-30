@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<properties>
+  <variables>
+    <variable name="home.path" value="D:/dev/workspace_luna/ndisc_Endian"/>
+  </variables>
+  <category name="general">
+    <property name="system" value="ACUBE DM"/>
+    <property name="tmp_dir" value="${home.path}/tmp"/>
+    <property name="log_dir" value="${home.path}/log"/>
+    <property name="cipher_key" value="${home.path}/config/NDSecretKey.ser"/>
+  </category>
+  <category name="cache">
+    <property name="cache_dir" value="${home.path}/cache"/>
+    <property name="capacity" value="1000"/>
+    <property name="memory" value="true"/><!-- add OSCache initialized 2014.09.23 -->
+    <property name="algorithm" value="com.opensymphony.oscache.base.algorithm.UnlimitedCache"/><!-- add OSCache initialized 2014.09.23 com.opensymphony.oscache.base.algorithm.UnlimitedCache -->
+    <property name="unlimited_disk" value="true"/><!-- add OSCache initialized 2014.09.23 -->
+    <property name="blocking" value="true"/><!-- add OSCache initialized 2014.09.23 -->
+    <property name="path" value="${home.path}/cache" /><!-- add OSCache initialized 2014.09.23 -->
+    <property name="persistence_class" value="com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener"/><!-- add OSCache initialized 2014.09.23 com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener -->
+    <property name="persistence_disk_hash_algorithm" value="MD5" /><!-- add OSCache initialized 2014.09.23 -->
+    <property name="persistence_overflow_only" value="true"/><!-- add OSCache initialized 2014.09.23 -->
+    <property name="event_listeners" value=""/><!-- add OSCache initialized 2014.09.23 com.opensymphony.oscache.plugins.clustersupport.JavaGroupsBroadcastingListener -->
+  </category>
+  <category name="JDBC">  	
+    <!-- JDBC URL 작성시 XML 특수기호 표시에 유의 (& -> &amp;) -->
+<!-- for mysql
+    <property name="URL" value="jdbc:mysql://localhost/ndisc?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8"/>
+    <property name="DRIVER" value="com.mysql.jdbc.Driver"/>
+-->
+<!-- for oracle -->
+    <property name="URL" value="jdbc:oracle:thin:@monkey:1521:ORA11"/>
+    <property name="DRIVER" value="oracle.jdbc.OracleDriver"/>
+
+<!-- for msssql
+    <property name="URL" value="jdbc:inetdae7:70.7.33.161:1433?database=ndiscdb"/>
+    <property name="DRIVER" value="com.inet.tds.TdsDriver"/>
+-->
+
+<!-- for Enterprise DB
+    <property name="URL" value="jdbc:edb://70.7.33.199:5444/ndisc"/>
+    <property name="DRIVER" value="com.edb.Driver"/>
+-->
+
+<!-- for Altibase DB
+    <property name="URL" value="jdbc:Altibase://70.7.103.129:20300/sbms"/>
+    <property name="DRIVER" value="Altibase.jdbc.driver.AltibaseDriver"/>
+-->
+
+<!-- for Tibero DB
+    <property name="URL" value="jdbc:tibero:thin:@70.7.103.129:8629:tibero"/>
+    <property name="DRIVER" value="com.tmax.tibero.jdbc.TbDriver"/>
+-->
+
+
+<!-- for Original NDISC DB Schema -->
+	<!-- DB Password 암호화 여부 2011.11.14 추가
+     - UtilCommand 를 이용하여 DB Password 암호화 
+     - 한번 암호화 한 string을 한번 더 암호화 할 것.. 
+     -->
+	<property name="ENC_FLAG" value="N"/>
+    <property name="USERNAME" value="nd_user"/>
+    <property name="PASSWORD" value="sds000"/>
+    <!-- <property name="PASSWORD" value="hXbkJKL+WK8="/> -->
+    
+
+<!-- for STORServ DB Schema 
+    <property name="USERNAME" value="storuser"/>
+    <property name="PASSWORD" value="sds000"/>-->
+  </category>
+  <category name="server">
+    <!-- <property name="host" value="70.7.103.106"/>-->
+    <property name="host" value="localhost"/>
+    <property name="port" value="7404"/>
+  </category>
+  <category name="logger">
+    <property name="impl_class_logger" value="com.sds.acube.ndisc.mts.logger.impl.Log4JLogger"/>
+  </category>
+  <category name="inner_filter">
+    <property name="impl_class_comp" value="com.sds.acube.ndisc.mts.filter.impl.DefFltCompress"/>
+    <property name="impl_class_enc" value="com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt"/>
+    <!-- 20160721 sea128 암복호화 구현체 추가 -->
+    <!-- property name="impl_class_enc" value="com.sds.acube.ndisc.mts.filter.impl.Sea128FltEncrypt"/-->
+  </category>
+  <category name="storage">
+  	<property name="schema_type" value="ndisc" /><!-- ndisc or storserv -->
+    <!-- for Original NDISC DB Schema -->
+    <property name="impl_class_storage" value="com.sds.acube.ndisc.mts.storage.impl.DefStorage"/>
+    <!-- for STORServ DB Schema
+    <property name="impl_class_storage" value="com.sds.acube.ndisc.mts.storage.impl.StorServStorage"/>-->
+    <!-- check endian [big(default) or little] when file ID encryption value is different from previous storserv -->
+    <property name="endian" value="big"/>
+  </category>
+  <category name="process">
+    <property name="impl_class_init" value="com.sds.acube.ndisc.mts.process.impl.ProcInit"/>
+    <property name="impl_class_filereg" value="com.sds.acube.ndisc.mts.process.impl.ProcFileReg"/>
+    <property name="impl_class_fileget" value="com.sds.acube.ndisc.mts.process.impl.ProcFileGet"/>
+    <property name="impl_class_filerep" value="com.sds.acube.ndisc.mts.process.impl.ProcFileRep"/>
+    <property name="impl_class_filedel" value="com.sds.acube.ndisc.mts.process.impl.ProcFileDel"/>
+    <property name="impl_class_filecpy" value="com.sds.acube.ndisc.mts.process.impl.ProcFileCpy"/>
+    <property name="impl_class_filemov" value="com.sds.acube.ndisc.mts.process.impl.ProcFileMov"/>
+    <property name="impl_class_fileinfo" value="com.sds.acube.ndisc.mts.process.impl.ProcFileInfo"/>
+    <property name="impl_class_volinfo" value="com.sds.acube.ndisc.mts.process.impl.ProcVolInfo"/>
+    <property name="impl_class_mkvolume" value="com.sds.acube.ndisc.mts.process.impl.ProcMkVolume"/>
+    <property name="impl_class_mkmedia" value="com.sds.acube.ndisc.mts.process.impl.ProcMkMedia"/>
+    <property name="impl_class_getconf" value="com.sds.acube.ndisc.mts.process.impl.ProcGetConf"/>
+  </category>  
+  
+  <!-- tuning point -->
+  <category name="tuning_point">
+  	<property name="so_trans_tune_apply" value="N"></property>
+  	<property name="so_trans_sleep" value="1"></property>
+  	<property name="so_trans_check_iter" value="10"></property>
+  	<property name="so_procinit_read_cnt" value="5"></property>  
+  </category>
+  
+  <!-- Connection FailOver Setting 2011.08.04-->
+  <category name="connection_failover">   
+         <property name="con_failover_apply" value="N"/>   <!-- 기능 적용 여부 : Y/N -->    
+         <property name="con_failover_target" value="10.41.131.135:8404;10.41.131.136:9404"/>   <!-- FailOver 대상 NDISC 서버 -->
+  </category>
+  
+  <!-- NDISC 구동을 위한 license key 
+  	     값이 없는 경우, 최대 10 번 까지의 파일 오퍼레이션만 가능 해 진다.  
+  -->
+  <category name="license">
+  	<!--  <property name="license_key" value="lj1BH4DB9QffcI_l_3vYbDwiWwQUUt+2" />-->
+    <property name="license_key" value="NIfbGPVNas+D92X7gp4TuQ==" />
+  </category>
+ 
+</properties>

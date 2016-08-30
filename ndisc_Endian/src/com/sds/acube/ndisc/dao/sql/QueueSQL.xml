@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+    PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="QueueSQL">
+
+    <typeAlias alias="queue" type="com.sds.acube.ndisc.model.Queue"/>
+    
+    <resultMap id="queueResult" class="queue">
+        <result property="fileId" column="que_fle_id"/>
+        <result property="type" column="que_type"/>
+        <result property="createdDate" column="que_crtdt"/>
+        <result property="status" column="que_status"/>
+    </resultMap>
+    
+	<insert id="saveQueue" parameterClass="queue">
+    <![CDATA[
+        INSERT INTO  tnd_queue (que_fle_id, que_type, que_crtdt, que_status)
+        VALUES (#fileId#, #type#, #createdDate#, #status#)
+    ]]>
+    </insert>
+
+   <insert id="updateQueue" parameterClass="queue">
+    <![CDATA[
+        UPDATE tnd_queue 
+        SET    que_status = #status#
+        WHERE que_fle_id = #fileId#
+          AND que_type = #type#
+    ]]>
+    </insert>
+    
+    <delete id="deleteQueue" parameterClass="queue">
+    <![CDATA[
+        DELETE FROM tnd_queue
+        WHERE que_fle_id = #fileId#
+          AND que_type = #type#
+    ]]>
+    </delete>
+  
+   <!--  
+        필터작업 등을 위해 조회되는 queue는 성격상 작업유형에 따라 목록으로 전달되어진다.     
+     -->          
+	<select id="getQueueLists" resultMap="queueResult">
+    <![CDATA[
+        SELECT que_fle_id, que_type, que_crtdt, que_status 
+        FROM tnd_queue
+        ORDER BY que_crtdt
+    ]]>
+    </select>
+        
+</sqlMap>

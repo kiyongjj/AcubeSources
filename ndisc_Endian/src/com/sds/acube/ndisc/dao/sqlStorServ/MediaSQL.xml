@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+    PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="MediaSQL">
+
+    <typeAlias alias="media" type="com.sds.acube.ndisc.model.Media"/>
+    
+    <resultMap id="mediaResult" class="media">
+        <result property="id" column="MD_ID"/>
+        <result property="name" column="MD_NAME"/>
+        <result property="type" column="MD_TYPE"/>
+        <result property="path" column="MD_PATH"/>        
+        <result property="createdDate" column="MD_CDATE"/>
+        <result property="desc" column="MD_INFO"/>
+        <!-- <result property="maxSize" column="md_maxsize"/>-->
+        <!-- <result property="size" column="md_size"/> -->
+        <result property="volumeId" column="MD_VOLID"/>
+    </resultMap>
+    
+    <resultMap id="mediaIDResult" class="media">
+        <result property="id" column="md_id"/>
+    </resultMap> 
+        
+	<insert id="saveMedia" parameterClass="media">
+    <![CDATA[
+        INSERT INTO MEDIA_TBL (MD_ID, MD_NAME, MD_TYPE, MD_PATH, MD_CDATE, MD_INFO, MD_VOLID)
+        VALUES (#id#, #name#, #type#, #path#, #createdDate#, #desc#, #volumeId#)
+    ]]>
+    </insert>
+
+   <insert id="updateMedia" parameterClass="media">
+    <![CDATA[
+        UPDATE MEDIA_TBL 
+        SET    MD_NAME = #name#,
+               MD_TYPE = #type#,
+               MD_PATH = #path#,
+               MD_INFO = #desc#,                              
+               MD_VOLID = #volumeId#
+        WHERE MD_ID = #id#
+    ]]>
+    </insert>
+    
+    <delete id="deleteMedia" parameterClass="int">
+    <![CDATA[
+        DELETE FROM MEDIA_TBL
+        WHERE MD_ID = #id#
+    ]]>
+    </delete>
+            
+	<select id="getMedia" resultMap="mediaResult">
+    <![CDATA[
+        SELECT MD_ID, MD_NAME, MD_TYPE, MD_PATH, MD_CDATE, MD_INFO, MD_VOLID 
+        FROM MEDIA_TBL 
+        WHERE MD_ID = #id#
+    ]]>
+    </select>
+    
+    
+    <select id="selectMediaListAll" resultMap="mediaResult">
+    <![CDATA[
+        SELECT MD_ID, MD_NAME, MD_TYPE, MD_PATH, MD_CDATE, MD_INFO, MD_VOLID 
+        FROM MEDIA_TBL       
+    ]]>
+    </select>
+    
+   <!--   
+   <select id="getAvailableMedia" resultMap="mediaResult" parameterClass="int">
+    <![CDATA[
+        SELECT MD_ID, MD_NAME, MD_TYPE, MD_PATH, MD_CDATE, MD_INFO, MD_VOLID 
+        FROM MEDIA_TBL 
+        WHERE MD_VOLID = #volumeId#
+        AND md_size < md_maxsize
+    ]]>
+    </select>
+    -->    
+    <!-- md_size / md_maxsize 필드가 StorServ 쪽에는 존재하지 않음 -->
+    <select id="getAvailableMedia" resultMap="mediaResult" parameterClass="int">
+    <![CDATA[
+        SELECT MD_ID, MD_NAME, MD_TYPE, MD_PATH, MD_CDATE, MD_INFO, MD_VOLID 
+        FROM MEDIA_TBL 
+        WHERE MD_VOLID = #volumeId#        
+    ]]>
+    </select>        
+        
+        
+	<select id="getMaxMediaID" resultMap="mediaIDResult">
+    <![CDATA[
+        SELECT max(MD_ID) MD_ID
+        FROM MEDIA_TBL 
+    ]]>
+    </select>  
+    
+    
+    <!-- For Explorer -->       
+    <select id="selectListByVolumeId" parameterClass="media" resultMap="mediaResult">
+    <![CDATA[
+        SELECT MD_ID, MD_NAME, MD_TYPE, MD_PATH, MD_CDATE, MD_INFO, md_volid 
+        FROM MEDIA_TBL 
+        where MD_VOLID = #volumeId#
+        order by MD_ID asc       
+    ]]>
+    </select>         
+            
+</sqlMap>

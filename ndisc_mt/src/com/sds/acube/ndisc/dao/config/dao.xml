@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE daoConfig
+    PUBLIC "-//iBATIS.com//DTD DAO Configuration 2.0//EN"
+    "http://www.ibatis.com/dtd/dao-2.dtd">
+
+<daoConfig>
+
+  <context>
+  	<!-- <transactionManager type="SQLMAP">
+      <property name="SqlMapConfigResource"
+        value="sql-map-config.xml"/>        
+    </transactionManager>-->
+
+    <transactionManager type="SQLMAP">
+      <property name="SqlMapConfigResource"
+        value="com/sds/acube/ndisc/dao/config/sql-map-config.xml"/>        
+    </transactionManager>
+
+    <dao interface="com.sds.acube.ndisc.dao.iface.FileDAO"
+      implementation="com.sds.acube.ndisc.dao.impl.FileSqlMapDAO"/>
+
+    <dao interface="com.sds.acube.ndisc.dao.iface.MediaDAO"
+      implementation="com.sds.acube.ndisc.dao.impl.MediaSqlMapDAO"/>
+
+    <dao interface="com.sds.acube.ndisc.dao.iface.VolumeDAO"
+      implementation="com.sds.acube.ndisc.dao.impl.VolumeSqlMapDAO"/>
+
+    <dao interface="com.sds.acube.ndisc.dao.iface.QueueDAO"
+      implementation="com.sds.acube.ndisc.dao.impl.QueueSqlMapDAO"/>
+
+    <!-- dao interface="com.sds.acube.ndisc.dao.iface.StatDAO"
+      implementation="com.sds.acube.ndisc.dao.impl.StatSqlMapDAO"/ -->
+
+  </context>
+  
+</daoConfig>

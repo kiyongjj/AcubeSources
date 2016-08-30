@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+    PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="StatSQL">
+
+    <typeAlias alias="stat" type="com.sds.acube.ndisc.model.Stat"/>
+    
+    <resultMap id="statResult" class="stat">
+        <result property="id" column="fle_id"/>
+    </resultMap>
+                
+	<select id="getFile" resultMap="stat">
+    <![CDATA[
+        SELECT fle_id, fle_name, fle_size, fle_crtdt, fle_moddt, fle_mdid, fle_type, fle_status 
+        FROM tstor_file 
+        WHERE fle_id=#id#
+    ]]>
+    </select>
+        
+</sqlMap>

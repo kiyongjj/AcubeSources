@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+    PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="VolumeSQL">
+
+    <typeAlias alias="volume" type="com.sds.acube.ndisc.model.Volume"/>
+    
+     <resultMap id="volumeResult" class="volume">
+        <result property="id" column="VOL_ID"/>
+        <result property="name" column="VOL_NAME"/>
+        <result property="accessable" column="VOL_ACC"/>
+        <result property="createdDate" column="VOL_CDATE"/>
+        <result property="desc" column="VOL_DESC"/>
+    </resultMap>
+    
+    <resultMap id="volumeIDResult" class="volume">
+        <result property="id" column="vol_id"/>
+    </resultMap>    
+    
+	<insert id="saveVolume" parameterClass="volume">
+    <![CDATA[
+        INSERT INTO  VOLUME_TBL (VOL_ID, VOL_NAME, VOL_ACC, VOL_CDATE, VOL_DESC)
+        VALUES (#id#, #name#, #accessable#, #createdDate#, #desc#)
+    ]]>
+    </insert>
+
+   <insert id="updateVolume" parameterClass="volume">
+    <![CDATA[
+        UPDATE VOLUME_TBL 
+        SET    VOL_NAME = #name#,
+               VOL_ACC = #accessable#,
+               VOL_DESC = #desc#
+        WHERE VOL_ID = #id#
+    ]]>
+    </insert>
+        
+    <delete id="deleteVolume">
+    <![CDATA[
+        DELETE FROM VOLUME_TBL
+        WHERE VOL_ID = #id#
+    ]]>
+    </delete>
+            
+	<select id="getVolume" resultMap="volumeResult">
+    <![CDATA[
+        SELECT VOL_ID, VOL_NAME, VOL_ACC, VOL_CDATE, VOL_DESC
+        FROM VOLUME_TBL 
+        WHERE VOL_ID=#id#
+    ]]>
+    </select>
+    
+    <select id="selectVolumeListAll" resultMap="volumeResult">
+    <![CDATA[
+        SELECT VOL_ID, VOL_NAME, VOL_ACC, VOL_CDATE, VOL_DESC
+        FROM VOLUME_TBL      
+        ORDER BY vol_id asc   
+    ]]>
+    </select>
+    
+	<select id="getMaxVolumeID" resultMap="volumeIDResult">
+    <![CDATA[
+        SELECT max(VOL_ID) VOL_ID
+        FROM VOLUME_TBL 
+    ]]>
+    </select>    
+    
+</sqlMap>

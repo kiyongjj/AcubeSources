@@ -1,0 +1,1425 @@
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8Ïõî 29 19:54:32] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8ø˘ 29 19:55:32] INFO [main] jstorapi.<clinit>(19) | -------------------------------------------------- 
+¢∫ Company :  SAMSUNG SDS¢∫ Product Name : JSTOR API for ACUBE DM¢∫ Version : ACUBE DM NApi for JSTOR (2009-04-23)
+[ndisc] [2016 8Ïõî 29 19:55:32] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:64994] Client is Connected.
+[ndisc] [2016 8Ïõî 29 19:55:32] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:64994] Client is Connected.
+[ndisc] [2016 8ø˘ 29 19:55:32] INFO [main] jstorapi.JSTOR_Connect(91) | JSTOR Connect / ConnID : 64994
+[ndisc] [2016 8Ïõî 29 19:55:32] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:55:32] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:55:32] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 19:55:32] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 19:55:35] DEBUG [main] ndisc.log(72) | ProcFileReg.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:55:35] DEBUG [main] ndisc.log(72) | ProcFileReg.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:55:35] DEBUG [main] ndisc.log(72) | receiveStatReady() !!!!
+[ndisc] [2016 8Ïõî 29 19:55:35] DEBUG [main] ndisc.log(72) | receiveStatReady() !!!!
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] SimpleDataSource.popConnection(579) | Created connection 15964986.
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] Connection.<init>(42) | {conn-100000} Connection
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] PreparedStatement.invoke(48) | {pstm-100001} PreparedStatement:               SELECT md_id, md_name, md_type, md_path, md_crtdt, md_desc, md_maxsize, md_size, md_volid          FROM tnd_media          WHERE md_volid = ?           AND md_size < md_maxsize         ORDER BY md_id          
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] PreparedStatement.invoke(49) | {pstm-100001} Parameters: [103]
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] PreparedStatement.invoke(50) | {pstm-100001} Types: [java.lang.Integer]
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ResultSet.<init>(41) | {rset-100002} ResultSet
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ResultSet.invoke(61) | {rset-100002} Header: [md_id, md_name, md_type, md_path, md_crtdt, md_desc, md_maxsize, md_size, md_volid]
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ResultSet.invoke(65) | {rset-100002} Result: [103, TEST_MEDIA02, 1, D:\dev\media\TEST_MEDIA02, 20160829120000, TEST_MEDIA02, 100000000000, 1002321581, 103]
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] SimpleDataSource.pushConnection(527) | Returned connection 15964986 to pool.
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | total media counts for volume 103 : 1
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | total media counts for volume 103 : 1
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | nFile[0].getStoragePath = D:\dev\media\TEST_MEDIA02\2016\08\29\ySDlPyFC+gX3y_oEsjLfXB1wKh+a5h2bRrlAGvMksVg8IlsEFFLftg==
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | nFile[0].getStoragePath = D:\dev\media\TEST_MEDIA02\2016\08\29\ySDlPyFC+gX3y_oEsjLfXB1wKh+a5h2bRrlAGvMksVg8IlsEFFLftg==
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | nFile[0].getMediaId = 103
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | nFile[0].getMediaId = 103
+[ndisc] [2016 8Ïõî 29 19:55:36] INFO [main] ndisc.info(90) | entered receiveFileExNIO
+[ndisc] [2016 8Ïõî 29 19:55:36] INFO [main] ndisc.info(90) | entered receiveFileExNIO
+[ndisc] [2016 8Ïõî 29 19:55:36] INFO [main] ndisc.info(90) | SO_TRANS_TUNE_APPLY - Disabled
+[ndisc] [2016 8Ïõî 29 19:55:36] INFO [main] ndisc.info(90) | SO_TRANS_TUNE_APPLY - Disabled
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | sendReplyMsg() !!!!
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | sendReplyMsg() !!!!
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | ProcFileReg.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | ProcFileReg.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:55:36] ERROR [main] ndisc.log(60) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:64994] ÌòÑÏû¨ Ïó∞Í≤∞ÏùÄ ÏõêÍ≤© Ìò∏Ïä§Ìä∏Ïóê ÏùòÌï¥ Í∞ïÏ†úÎ°ú ÎÅäÍ≤ºÏäµÎãàÎã§
+[ndisc] [2016 8Ïõî 29 19:55:36] ERROR [main] ndisc.log(60) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:64994] ÌòÑÏû¨ Ïó∞Í≤∞ÏùÄ ÏõêÍ≤© Ìò∏Ïä§Ìä∏Ïóê ÏùòÌï¥ Í∞ïÏ†úÎ°ú ÎÅäÍ≤ºÏäµÎãàÎã§
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 19:55:36] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8Ïõî 29 19:56:22] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8ø˘ 29 19:56:25] INFO [main] jstorapi.<clinit>(19) | -------------------------------------------------- 
+¢∫ Company :  SAMSUNG SDS¢∫ Product Name : JSTOR API for ACUBE DM¢∫ Version : ACUBE DM NApi for JSTOR (2009-04-23)
+[ndisc] [2016 8Ïõî 29 19:56:25] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65022] Client is Connected.
+[ndisc] [2016 8Ïõî 29 19:56:25] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65022] Client is Connected.
+[ndisc] [2016 8ø˘ 29 19:56:25] INFO [main] jstorapi.JSTOR_Connect(91) | JSTOR Connect / ConnID : 65022
+[ndisc] [2016 8Ïõî 29 19:56:25] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:56:25] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:56:25] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 19:56:25] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 19:56:25] DEBUG [main] ndisc.log(72) | ProcFileReg.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:56:25] DEBUG [main] ndisc.log(72) | ProcFileReg.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:56:25] DEBUG [main] ndisc.log(72) | receiveStatReady() !!!!
+[ndisc] [2016 8Ïõî 29 19:56:25] DEBUG [main] ndisc.log(72) | receiveStatReady() !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] SimpleDataSource.popConnection(579) | Created connection 10044878.
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] Connection.<init>(42) | {conn-100000} Connection
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] PreparedStatement.invoke(48) | {pstm-100001} PreparedStatement:               SELECT md_id, md_name, md_type, md_path, md_crtdt, md_desc, md_maxsize, md_size, md_volid          FROM tnd_media          WHERE md_volid = ?           AND md_size < md_maxsize         ORDER BY md_id          
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] PreparedStatement.invoke(49) | {pstm-100001} Parameters: [103]
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] PreparedStatement.invoke(50) | {pstm-100001} Types: [java.lang.Integer]
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ResultSet.<init>(41) | {rset-100002} ResultSet
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ResultSet.invoke(61) | {rset-100002} Header: [md_id, md_name, md_type, md_path, md_crtdt, md_desc, md_maxsize, md_size, md_volid]
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ResultSet.invoke(65) | {rset-100002} Result: [103, TEST_MEDIA02, 1, D:\dev\media\TEST_MEDIA02, 20160829120000, TEST_MEDIA02, 100000000000, 1002321581, 103]
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] SimpleDataSource.pushConnection(527) | Returned connection 10044878 to pool.
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | total media counts for volume 103 : 1
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | total media counts for volume 103 : 1
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | nFile[0].getStoragePath = D:\dev\media\TEST_MEDIA02\2016\08\29\QhLaNRVDwERbNo5mUrB0liBWehafBHiqH_xSG9HxtmA8IlsEFFLftg==
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | nFile[0].getStoragePath = D:\dev\media\TEST_MEDIA02\2016\08\29\QhLaNRVDwERbNo5mUrB0liBWehafBHiqH_xSG9HxtmA8IlsEFFLftg==
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | nFile[0].getMediaId = 103
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | nFile[0].getMediaId = 103
+[ndisc] [2016 8Ïõî 29 19:56:26] INFO [main] ndisc.info(90) | entered receiveFileExNIO
+[ndisc] [2016 8Ïõî 29 19:56:26] INFO [main] ndisc.info(90) | entered receiveFileExNIO
+[ndisc] [2016 8Ïõî 29 19:56:26] INFO [main] ndisc.info(90) | SO_TRANS_TUNE_APPLY - Disabled
+[ndisc] [2016 8Ïõî 29 19:56:26] INFO [main] ndisc.info(90) | SO_TRANS_TUNE_APPLY - Disabled
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | receiveFileExNIO() !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | receiveFileExNIO() !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | statType(filter) none
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | statType(filter) none
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] SimpleDataSource.popConnection(563) | Checked out connection 10044878 from pool.
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] Connection.<init>(42) | {conn-100003} Connection
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] PreparedStatement.invoke(48) | {pstm-100004} PreparedStatement:               INSERT INTO  tnd_file (fle_id, fle_name, fle_size, fle_crtdt, fle_status, fle_mdid)         VALUES (?, ?, ?, ?, ?, ?)          
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] PreparedStatement.invoke(49) | {pstm-100004} Parameters: [d760444632532d722a18c4eef1daaa91, NDiscTest0.docx, 2321581, 20160829075625, 0, 103]
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] PreparedStatement.invoke(50) | {pstm-100004} Types: [java.lang.String, java.lang.String, java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer]
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] PreparedStatement.invoke(48) | {pstm-100005} PreparedStatement:               UPDATE tnd_media          SET    md_size = md_size + ?         WHERE md_id = ?          
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] PreparedStatement.invoke(49) | {pstm-100005} Parameters: [2321581, 103]
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] PreparedStatement.invoke(50) | {pstm-100005} Types: [java.lang.Integer, java.lang.Integer]
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] SimpleDataSource.pushConnection(527) | Returned connection 10044878 to pool.
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | registNFileToDB() !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | registNFileToDB() !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | sendReplyMsg() !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | sendReplyMsg() !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | ProcFileReg.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | ProcFileReg.process() ended !!!!
+[ndisc] [2016 8ø˘ 29 19:56:26] INFO [main] jstorapi.JSTOR_FileReg(138) | JSTOR_FileReg() success
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 19:56:26] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8ø˘ 29 19:56:26] INFO [main] jstorapi.JSTOR_Disconnect(104) | JSTOR Disconnect / ConnID : 65022
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8Ïõî 29 20:21:57] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8ø˘ 29 20:22:00] INFO [main] jstorapi.<clinit>(19) | -------------------------------------------------- 
+¢∫ Company :  SAMSUNG SDS¢∫ Product Name : JSTOR API for ACUBE DM¢∫ Version : ACUBE DM NApi for JSTOR (2009-04-23)
+[ndisc] [2016 8Ïõî 29 20:22:00] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65161] Client is Connected.
+[ndisc] [2016 8Ïõî 29 20:22:00] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65161] Client is Connected.
+[ndisc] [2016 8ø˘ 29 20:22:00] INFO [main] jstorapi.JSTOR_Connect(91) | JSTOR Connect / ConnID : 65161
+[ndisc] [2016 8Ïõî 29 20:22:00] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 20:22:00] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 20:22:00] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 20:22:00] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 20:22:00] DEBUG [main] ndisc.log(72) | ProcFileReg.process() started !!!!
+[ndisc] [2016 8Ïõî 29 20:22:00] DEBUG [main] ndisc.log(72) | ProcFileReg.process() started !!!!
+[ndisc] [2016 8Ïõî 29 20:22:00] DEBUG [main] ndisc.log(72) | receiveStatReady() !!!!
+[ndisc] [2016 8Ïõî 29 20:22:00] DEBUG [main] ndisc.log(72) | receiveStatReady() !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] SimpleDataSource.popConnection(579) | Created connection 11918020.
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] Connection.<init>(42) | {conn-100000} Connection
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] PreparedStatement.invoke(48) | {pstm-100001} PreparedStatement:               SELECT md_id, md_name, md_type, md_path, md_crtdt, md_desc, md_maxsize, md_size, md_volid          FROM tnd_media          WHERE md_volid = ?           AND md_size < md_maxsize         ORDER BY md_id          
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] PreparedStatement.invoke(49) | {pstm-100001} Parameters: [103]
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] PreparedStatement.invoke(50) | {pstm-100001} Types: [java.lang.Integer]
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ResultSet.<init>(41) | {rset-100002} ResultSet
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ResultSet.invoke(61) | {rset-100002} Header: [md_id, md_name, md_type, md_path, md_crtdt, md_desc, md_maxsize, md_size, md_volid]
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ResultSet.invoke(65) | {rset-100002} Result: [103, TEST_MEDIA02, 1, D:\dev\media\TEST_MEDIA02, 20160829120000, TEST_MEDIA02, 100000000000, 1004643162, 103]
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] SimpleDataSource.pushConnection(527) | Returned connection 11918020 to pool.
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | total media counts for volume 103 : 1
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | total media counts for volume 103 : 1
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | nFile[0].getStoragePath = D:\dev\media\TEST_MEDIA02\2016\08\29\2iCD_LDIy9_B1qejvty069KssB2zUZbXyOjE9iRaBMM8IlsEFFLftg==
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | nFile[0].getStoragePath = D:\dev\media\TEST_MEDIA02\2016\08\29\2iCD_LDIy9_B1qejvty069KssB2zUZbXyOjE9iRaBMM8IlsEFFLftg==
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | nFile[0].getMediaId = 103
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | nFile[0].getMediaId = 103
+[ndisc] [2016 8Ïõî 29 20:22:01] INFO [main] ndisc.info(90) | entered receiveFileExNIO
+[ndisc] [2016 8Ïõî 29 20:22:01] INFO [main] ndisc.info(90) | entered receiveFileExNIO
+[ndisc] [2016 8Ïõî 29 20:22:01] INFO [main] ndisc.info(90) | SO_TRANS_TUNE_APPLY - Disabled
+[ndisc] [2016 8Ïõî 29 20:22:01] INFO [main] ndisc.info(90) | SO_TRANS_TUNE_APPLY - Disabled
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | receiveFileExNIO() !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | receiveFileExNIO() !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | statType(filter) none
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | statType(filter) none
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] SimpleDataSource.popConnection(563) | Checked out connection 11918020 from pool.
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] Connection.<init>(42) | {conn-100003} Connection
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] PreparedStatement.invoke(48) | {pstm-100004} PreparedStatement:               INSERT INTO  tnd_file (fle_id, fle_name, fle_size, fle_crtdt, fle_status, fle_mdid)         VALUES (?, ?, ?, ?, ?, ?)          
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] PreparedStatement.invoke(49) | {pstm-100004} Parameters: [a2ef5173245e4d0c6cbf901bce218799, NDiscTest0.docx, 2321581, 20160829082200, 0, 103]
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] PreparedStatement.invoke(50) | {pstm-100004} Types: [java.lang.String, java.lang.String, java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer]
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] PreparedStatement.invoke(48) | {pstm-100005} PreparedStatement:               UPDATE tnd_media          SET    md_size = md_size + ?         WHERE md_id = ?          
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] PreparedStatement.invoke(49) | {pstm-100005} Parameters: [2321581, 103]
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] PreparedStatement.invoke(50) | {pstm-100005} Types: [java.lang.Integer, java.lang.Integer]
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] SimpleDataSource.pushConnection(527) | Returned connection 11918020 to pool.
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | registNFileToDB() !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | registNFileToDB() !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | sendReplyMsg() !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | sendReplyMsg() !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | ProcFileReg.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | ProcFileReg.process() ended !!!!
+[ndisc] [2016 8ø˘ 29 20:22:01] INFO [main] jstorapi.JSTOR_FileReg(138) | JSTOR_FileReg() success
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 20:22:01] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8ø˘ 29 20:22:01] INFO [main] jstorapi.JSTOR_Disconnect(104) | JSTOR Disconnect / ConnID : 65161
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8Ïõî 29 20:22:26] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8ø˘ 29 20:23:14] INFO [main] jstorapi.<clinit>(91) | 
+¶£------------------------------------------------------------¶§
+¶¢                                                            ¶¢
+¶¢   Company        : SAMSUNG SDS                             ¶¢
+¶¢   Product Name   : JSTOR API for ACUBE                     ¶¢
+¶¢   Version        : ACUBE JSTOR XNDISC XNAPI 1.0.1(2014-04-01)¶¢
+¶¢                                                            ¶¢
+¶¶------------------------------------------------------------¶•
+
+[ndisc] [2016 8ø˘ 29 20:23:29] INFO [main] jstorapi.<clinit>(91) | 
+¶£------------------------------------------------------------¶§
+¶¢                                                            ¶¢
+¶¢   Company        : SAMSUNG SDS                             ¶¢
+¶¢   Product Name   : JSTOR API for ACUBE                     ¶¢
+¶¢   Version        : ACUBE JSTOR XNDISC XNAPI 1.0.1(2014-04-01)¶¢
+¶¢                                                            ¶¢
+¶¶------------------------------------------------------------¶•
+
+[ndisc] [2016 8Ïõî 29 20:23:29] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65172] Client is Connected.
+[ndisc] [2016 8Ïõî 29 20:23:29] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65172] Client is Connected.
+[ndisc] [2016 8ø˘ 29 20:23:29] DEBUG [main] XNApi.Connect(1175) | *** [85cb0370156d60a395322bbdfa2C1I0] [127.0.0.1:65172] Connected Client
+[ndisc] [2016 8ø˘ 29 20:23:29] DEBUG [main] XNApi.Connect(1175) | *** [85cb0370156d60a395322bbdfa2C1I0] [127.0.0.1:65172] Connected Client
+[ndisc] [2016 8ø˘ 29 20:23:29] DEBUG [main] XNApi.XNDISC_FileReg(265) | *** [85cb0370156d60a395322bbdfa2C1I0] [127.0.0.1:65172] makeRegInfo start
+[ndisc] [2016 8ø˘ 29 20:23:29] DEBUG [main] XNApi.XNDISC_FileReg(265) | *** [85cb0370156d60a395322bbdfa2C1I0] [127.0.0.1:65172] makeRegInfo start
+[ndisc] [2016 8ø˘ 29 20:23:29] DEBUG [main] XNApi.XNDISC_FileReg(269) | *** [85cb0370156d60a395322bbdfa2C1I0] [127.0.0.1:65172] makeRegInfo end
+[ndisc] [2016 8ø˘ 29 20:23:29] DEBUG [main] XNApi.XNDISC_FileReg(269) | *** [85cb0370156d60a395322bbdfa2C1I0] [127.0.0.1:65172] makeRegInfo end
+[ndisc] [2016 8ø˘ 29 20:23:29] DEBUG [main] XNApi.XNDISC_FileReg(270) | *** [85cb0370156d60a395322bbdfa2C1I0] [127.0.0.1:65172] sendRegInfo start
+[ndisc] [2016 8ø˘ 29 20:23:29] DEBUG [main] XNApi.XNDISC_FileReg(270) | *** [85cb0370156d60a395322bbdfa2C1I0] [127.0.0.1:65172] sendRegInfo start
+[ndisc] [2016 8ø˘ 29 20:23:29] DEBUG [main] XNApi.XNDISC_FileReg(297) | *** [85cb0370156d60a395322bbdfa2C1I0] [127.0.0.1:65172] sendRegInfo end
+[ndisc] [2016 8Ïõî 29 20:23:29] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 20:23:29] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8ø˘ 29 20:23:29] DEBUG [main] XNApi.XNDISC_FileReg(297) | *** [85cb0370156d60a395322bbdfa2C1I0] [127.0.0.1:65172] sendRegInfo end
+[ndisc] [2016 8Ïõî 29 20:23:29] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 20:23:29] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8ø˘ 29 20:24:22] ERROR [main] jstorapi.JSTOR_FileReg(251) | JSTOR_FileReg fail : null; nested exception is: 
+	java.nio.channels.ClosedChannelException
+[ndisc] [2016 8ø˘ 29 20:24:22] INFO [main] jstorapi.JSTOR_Disconnect(196) | JSTOR Disconnect / ConnID : 65172
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8Ïõî 29 20:24:56] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8ø˘ 29 20:24:59] INFO [main] jstorapi.<clinit>(91) | 
+¶£------------------------------------------------------------¶§
+¶¢                                                            ¶¢
+¶¢   Company        : SAMSUNG SDS                             ¶¢
+¶¢   Product Name   : JSTOR API for ACUBE                     ¶¢
+¶¢   Version        : ACUBE JSTOR XNDISC XNAPI 1.0.1(2014-04-01)¶¢
+¶¢                                                            ¶¢
+¶¶------------------------------------------------------------¶•
+
+[ndisc] [2016 8Ïõî 29 20:25:00] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65181] Client is Connected.
+[ndisc] [2016 8Ïõî 29 20:25:00] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65181] Client is Connected.
+[ndisc] [2016 8ø˘ 29 20:25:00] DEBUG [main] XNApi.Connect(1176) | *** [85cb0370156d60b9b1e51575b09C1I0] [127.0.0.1:65181] Connected Client
+[ndisc] [2016 8ø˘ 29 20:25:00] DEBUG [main] XNApi.Connect(1176) | *** [85cb0370156d60b9b1e51575b09C1I0] [127.0.0.1:65181] Connected Client
+[ndisc] [2016 8ø˘ 29 20:25:00] DEBUG [main] XNApi.XNDISC_FileReg(265) | *** [85cb0370156d60b9b1e51575b09C1I0] [127.0.0.1:65181] makeRegInfo start
+[ndisc] [2016 8ø˘ 29 20:25:00] DEBUG [main] XNApi.XNDISC_FileReg(265) | *** [85cb0370156d60b9b1e51575b09C1I0] [127.0.0.1:65181] makeRegInfo start
+[ndisc] [2016 8ø˘ 29 20:25:00] DEBUG [main] XNApi.XNDISC_FileReg(269) | *** [85cb0370156d60b9b1e51575b09C1I0] [127.0.0.1:65181] makeRegInfo end
+[ndisc] [2016 8ø˘ 29 20:25:00] DEBUG [main] XNApi.XNDISC_FileReg(269) | *** [85cb0370156d60b9b1e51575b09C1I0] [127.0.0.1:65181] makeRegInfo end
+[ndisc] [2016 8ø˘ 29 20:25:00] DEBUG [main] XNApi.XNDISC_FileReg(270) | *** [85cb0370156d60b9b1e51575b09C1I0] [127.0.0.1:65181] sendRegInfo start
+[ndisc] [2016 8ø˘ 29 20:25:00] DEBUG [main] XNApi.XNDISC_FileReg(270) | *** [85cb0370156d60b9b1e51575b09C1I0] [127.0.0.1:65181] sendRegInfo start
+[ndisc] [2016 8ø˘ 29 20:25:00] DEBUG [main] XNApi.XNDISC_FileReg(297) | *** [85cb0370156d60b9b1e51575b09C1I0] [127.0.0.1:65181] sendRegInfo end
+[ndisc] [2016 8Ïõî 29 20:25:00] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 20:25:00] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8ø˘ 29 20:25:00] DEBUG [main] XNApi.XNDISC_FileReg(297) | *** [85cb0370156d60b9b1e51575b09C1I0] [127.0.0.1:65181] sendRegInfo end
+[ndisc] [2016 8Ïõî 29 20:25:00] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 20:25:00] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8ø˘ 29 20:25:04] ERROR [main] jstorapi.JSTOR_FileReg(251) | JSTOR_FileReg fail : null; nested exception is: 
+	java.nio.channels.ClosedChannelException
+[ndisc] [2016 8ø˘ 29 20:25:04] INFO [main] jstorapi.JSTOR_Disconnect(196) | JSTOR Disconnect / ConnID : 65181
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8Ïõî 29 20:31:53] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8ø˘ 29 20:31:56] INFO [main] jstorapi.<clinit>(91) | 
+¶£------------------------------------------------------------¶§
+¶¢                                                            ¶¢
+¶¢   Company        : SAMSUNG SDS                             ¶¢
+¶¢   Product Name   : JSTOR API for ACUBE                     ¶¢
+¶¢   Version        : ACUBE JSTOR XNDISC XNAPI 1.0.1(2014-04-01)¶¢
+¶¢                                                            ¶¢
+¶¶------------------------------------------------------------¶•
+
+[ndisc] [2016 8Ïõî 29 20:31:56] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65210] Client is Connected.
+[ndisc] [2016 8Ïõî 29 20:31:56] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65210] Client is Connected.
+[ndisc] [2016 8ø˘ 29 20:31:56] DEBUG [main] XNApi.Connect(1177) | *** [85cb0370156d611f5103633e9adC1I0] [127.0.0.1:65210] Connected Client
+[ndisc] [2016 8ø˘ 29 20:31:56] DEBUG [main] XNApi.Connect(1177) | *** [85cb0370156d611f5103633e9adC1I0] [127.0.0.1:65210] Connected Client
+[ndisc] [2016 8ø˘ 29 20:31:56] DEBUG [main] XNApi.XNDISC_FileReg(265) | *** [85cb0370156d611f5103633e9adC1I0] [127.0.0.1:65210] makeRegInfo start
+[ndisc] [2016 8ø˘ 29 20:31:56] DEBUG [main] XNApi.XNDISC_FileReg(265) | *** [85cb0370156d611f5103633e9adC1I0] [127.0.0.1:65210] makeRegInfo start
+[ndisc] [2016 8ø˘ 29 20:31:56] DEBUG [main] XNApi.XNDISC_FileReg(269) | *** [85cb0370156d611f5103633e9adC1I0] [127.0.0.1:65210] makeRegInfo end
+[ndisc] [2016 8ø˘ 29 20:31:56] DEBUG [main] XNApi.XNDISC_FileReg(269) | *** [85cb0370156d611f5103633e9adC1I0] [127.0.0.1:65210] makeRegInfo end
+[ndisc] [2016 8ø˘ 29 20:31:56] DEBUG [main] XNApi.XNDISC_FileReg(270) | *** [85cb0370156d611f5103633e9adC1I0] [127.0.0.1:65210] sendRegInfo start
+[ndisc] [2016 8ø˘ 29 20:31:56] DEBUG [main] XNApi.XNDISC_FileReg(270) | *** [85cb0370156d611f5103633e9adC1I0] [127.0.0.1:65210] sendRegInfo start
+[ndisc] [2016 8ø˘ 29 20:31:56] DEBUG [main] XNApi.XNDISC_FileReg(297) | *** [85cb0370156d611f5103633e9adC1I0] [127.0.0.1:65210] sendRegInfo end
+[ndisc] [2016 8Ïõî 29 20:31:56] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 20:31:56] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8ø˘ 29 20:31:56] DEBUG [main] XNApi.XNDISC_FileReg(297) | *** [85cb0370156d611f5103633e9adC1I0] [127.0.0.1:65210] sendRegInfo end
+[ndisc] [2016 8Ïõî 29 20:31:56] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 20:31:56] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8ø˘ 29 20:32:02] ERROR [main] jstorapi.JSTOR_FileReg(251) | JSTOR_FileReg fail : null; nested exception is: 
+	java.nio.channels.ClosedChannelException
+[ndisc] [2016 8ø˘ 29 20:32:02] INFO [main] jstorapi.JSTOR_Disconnect(196) | JSTOR Disconnect / ConnID : 65210
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | initFilter()
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | initStorage()
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | initProcess()
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | initServer()
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | ACUBE DM Configuration has loaded
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | 
+Category=process
+  impl_class_mkvolume=com.sds.acube.ndisc.mts.process.impl.ProcMkVolume
+  impl_class_filedel=com.sds.acube.ndisc.mts.process.impl.ProcFileDel
+  impl_class_filemov=com.sds.acube.ndisc.mts.process.impl.ProcFileMov
+  impl_class_fileinfo=com.sds.acube.ndisc.mts.process.impl.ProcFileInfo
+  impl_class_volinfo=com.sds.acube.ndisc.mts.process.impl.ProcVolInfo
+  impl_class_filereg=com.sds.acube.ndisc.mts.process.impl.ProcFileReg
+  impl_class_fileget=com.sds.acube.ndisc.mts.process.impl.ProcFileGet
+  impl_class_filecpy=com.sds.acube.ndisc.mts.process.impl.ProcFileCpy
+  impl_class_mkmedia=com.sds.acube.ndisc.mts.process.impl.ProcMkMedia
+  impl_class_init=com.sds.acube.ndisc.mts.process.impl.ProcInit
+  impl_class_getconf=com.sds.acube.ndisc.mts.process.impl.ProcGetConf
+  impl_class_filerep=com.sds.acube.ndisc.mts.process.impl.ProcFileRep
+Category=tuning_point
+  so_trans_sleep=1
+  so_procinit_read_cnt=5
+  so_trans_check_iter=10
+  so_trans_tune_apply=N
+Category=cache
+  persistence_disk_hash_algorithm=MD5
+  capacity=1000
+  persistence_overflow_only=true
+  memory=true
+  persistence_class=com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener
+  event_listeners=
+  blocking=true
+  algorithm=com.opensymphony.oscache.base.algorithm.UnlimitedCache
+  cache_dir=${home.path}/cache
+  unlimited_disk=true
+  path=${home.path}/cache
+Category=logger
+  impl_class_logger=com.sds.acube.ndisc.mts.logger.impl.Log4JLogger
+Category=connection_failover
+  con_failover_target=10.41.131.135:8404;10.41.131.136:9404
+  con_failover_apply=N
+Category=server
+  port=7404
+  host=localhost
+Category=license
+  license_key=NIfbGPVNas+D92X7gp4TuQ==
+Category=inner_filter
+  impl_class_comp=com.sds.acube.ndisc.mts.filter.impl.DefFltCompress
+  impl_class_enc=com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt
+Category=general
+  cipher_key=${home.path}/config/NDSecretKey.ser
+  log_dir=${home.path}/log
+  tmp_dir=${home.path}/tmp
+  system=ACUBE DM
+Category=options
+  dispatcher_max_handles=15
+  multiplication_thread_available_processors=Y
+  use_ssl=true
+  workpool_thread_priority=MAX
+  workerpool_type=F
+  workerpool_thread_count=10
+  transfer_mapped_bytebuffer_maxsize=32
+  ssl_passphrase=hXbkJKL+WK8=
+  detach_handle_no_operation=true
+  workerpool_min_size=3
+  workerpool_size=15
+  xsocket_debug=true
+  transfer_type=M
+  ssl_server_key_file=xndisc-keyfile.jks
+  readbuffer_usedirect=true
+  dispatcher_initial_count=3
+Category=storage
+  impl_class_storage=com.sds.acube.ndisc.mts.storage.impl.DefStorage
+Category=JDBC
+  URL=jdbc:oracle:thin:@monkey:1521:ORA11
+  ENC_FLAG=N
+  DRIVER=oracle.jdbc.OracleDriver
+  USERNAME=nd_user
+  PASSWORD=sds000
+
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | ACUBE DM(V5.0) is succefully started [BINDING PORT : 7404]
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8Ïõî 29 20:35:35] INFO [main] ndisc.info(90) | License key is valid!
+[ndisc] [2016 8ø˘ 29 20:35:39] INFO [main] jstorapi.<clinit>(91) | 
+¶£------------------------------------------------------------¶§
+¶¢                                                            ¶¢
+¶¢   Company        : SAMSUNG SDS                             ¶¢
+¶¢   Product Name   : JSTOR API for ACUBE                     ¶¢
+¶¢   Version        : ACUBE JSTOR XNDISC XNAPI 1.0.1(2014-04-01)¶¢
+¶¢                                                            ¶¢
+¶¶------------------------------------------------------------¶•
+
+[ndisc] [2016 8Ïõî 29 20:35:39] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65226] Client is Connected.
+[ndisc] [2016 8Ïõî 29 20:35:39] INFO [main] ndisc.info(90) | java.nio.channels.SocketChannel[connected local=/127.0.0.1:7404 remote=/127.0.0.1:65226] Client is Connected.
+[ndisc] [2016 8ø˘ 29 20:35:39] DEBUG [main] XNApi.Connect(1177) | *** [85cb0370156d6155c99366b3a18C1I0] [127.0.0.1:65226] Connected Client
+[ndisc] [2016 8ø˘ 29 20:35:39] DEBUG [main] XNApi.Connect(1177) | *** [85cb0370156d6155c99366b3a18C1I0] [127.0.0.1:65226] Connected Client
+[ndisc] [2016 8ø˘ 29 20:35:39] DEBUG [main] XNApi.XNDISC_FileReg(265) | *** [85cb0370156d6155c99366b3a18C1I0] [127.0.0.1:65226] makeRegInfo start
+[ndisc] [2016 8ø˘ 29 20:35:39] DEBUG [main] XNApi.XNDISC_FileReg(265) | *** [85cb0370156d6155c99366b3a18C1I0] [127.0.0.1:65226] makeRegInfo start
+[ndisc] [2016 8ø˘ 29 20:35:39] DEBUG [main] XNApi.XNDISC_FileReg(269) | *** [85cb0370156d6155c99366b3a18C1I0] [127.0.0.1:65226] makeRegInfo end
+[ndisc] [2016 8ø˘ 29 20:35:39] DEBUG [main] XNApi.XNDISC_FileReg(269) | *** [85cb0370156d6155c99366b3a18C1I0] [127.0.0.1:65226] makeRegInfo end
+[ndisc] [2016 8ø˘ 29 20:35:39] DEBUG [main] XNApi.XNDISC_FileReg(270) | *** [85cb0370156d6155c99366b3a18C1I0] [127.0.0.1:65226] sendRegInfo start
+[ndisc] [2016 8ø˘ 29 20:35:39] DEBUG [main] XNApi.XNDISC_FileReg(270) | *** [85cb0370156d6155c99366b3a18C1I0] [127.0.0.1:65226] sendRegInfo start
+[ndisc] [2016 8ø˘ 29 20:35:39] DEBUG [main] XNApi.XNDISC_FileReg(297) | *** [85cb0370156d6155c99366b3a18C1I0] [127.0.0.1:65226] sendRegInfo end
+[ndisc] [2016 8Ïõî 29 20:35:39] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8Ïõî 29 20:35:39] DEBUG [main] ndisc.log(72) | ProcInit.process() started !!!!
+[ndisc] [2016 8ø˘ 29 20:35:39] DEBUG [main] XNApi.XNDISC_FileReg(297) | *** [85cb0370156d6155c99366b3a18C1I0] [127.0.0.1:65226] sendRegInfo end
+[ndisc] [2016 8Ïõî 29 20:35:39] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8Ïõî 29 20:35:39] DEBUG [main] ndisc.log(72) | ProcInit.process() ended !!!!
+[ndisc] [2016 8ø˘ 29 20:35:45] ERROR [main] jstorapi.JSTOR_FileReg(251) | JSTOR_FileReg fail : null; nested exception is: 
+	java.nio.channels.ClosedChannelException
+[ndisc] [2016 8ø˘ 29 20:35:45] INFO [main] jstorapi.JSTOR_Disconnect(196) | JSTOR Disconnect / ConnID : 65226

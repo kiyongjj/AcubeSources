@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<properties>
+  <category name="general">
+    <property name="tmp-dir" value="./"/>
+  </category>
+  <category name="stor-api">
+    <property name="type" value="pure_java"/>
+    <property name="server" value="unix"/>
+  </category>
+  <category name="stor-server">
+    <property name="host" value="70.7.33.152"/>
+    <property name="port" value="8995"/>
+    <property name="target-media" value="101"/>
+  </category>
+  <category name="stor-jdbc">
+    <property name="driver" value="oracle.jdbc.OracleDriver"/>
+    <property name="url" value="jdbc:oracle:thin:@70.7.33.180:1521:ora9"/>
+    <property name="user" value="nd_user"/>
+    <property name="password" value="sds000"/>
+  </category>
+  <category name="ndisc-server">
+    <property name="host" value="70.7.33.152"/>
+    <property name="port" value="7404"/>
+    <property name="target-volume" value="101"/>
+    <property name="status" value="0"/>   <!-- {R : remain} {0 : no} {1 : comp} {2 : enc} {3 : comp+enc} -->
+  </category>
+</properties>

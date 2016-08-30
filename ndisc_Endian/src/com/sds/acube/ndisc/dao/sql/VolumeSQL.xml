@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+    PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="VolumeSQL">
+
+    <typeAlias alias="volume" type="com.sds.acube.ndisc.model.Volume"/>
+    
+    <resultMap id="volumeResult" class="volume">
+        <result property="id" column="vol_id"/>
+        <result property="name" column="vol_name"/>
+        <result property="accessable" column="vol_access"/>
+        <result property="createdDate" column="vol_crtdt"/>
+        <result property="desc" column="vol_desc"/>
+    </resultMap>
+    
+    <resultMap id="volumeIDResult" class="volume">
+        <result property="id" column="vol_id"/>
+    </resultMap>    
+    
+	<insert id="saveVolume" parameterClass="volume">
+    <![CDATA[
+        INSERT INTO  tnd_volume (vol_id, vol_name, vol_access, vol_crtdt, vol_desc)
+        VALUES (#id#, #name#, #accessable#, #createdDate#, #desc#)
+    ]]>
+    </insert>
+
+   <insert id="updateVolume" parameterClass="volume">
+    <![CDATA[
+        UPDATE tnd_volume 
+        SET    vol_name = #name#,
+               vol_access = #accessable#,
+               vol_desc = #desc#
+        WHERE vol_id = #id#
+    ]]>
+    </insert>
+        
+    <delete id="deleteVolume">
+    <![CDATA[
+        DELETE FROM tnd_volume
+        WHERE vol_id = #id#
+    ]]>
+    </delete>
+            
+	<select id="getVolume" resultMap="volumeResult">
+    <![CDATA[
+        SELECT vol_id, vol_name, vol_access, vol_crtdt, vol_desc
+        FROM tnd_volume 
+        WHERE vol_id=#id#
+    ]]>
+    </select>
+    
+    <select id="selectVolumeListAll" resultMap="volumeResult">
+    <![CDATA[
+        SELECT vol_id, vol_name, vol_access, vol_crtdt, vol_desc
+        FROM tnd_volume    
+        ORDER BY vol_id asc    
+    ]]>
+    </select>
+    
+	<select id="getMaxVolumeID" resultMap="volumeIDResult">
+    <![CDATA[
+        SELECT max(vol_id) vol_id
+        FROM tnd_volume 
+    ]]>
+    </select>   
+    
+ 
+</sqlMap>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+    PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="FileSQL">
+
+    <typeAlias alias="nFile" type="com.sds.acube.ndisc.model.NFile"/>
+    <typeAlias alias="DataBox" type="com.sds.acube.ndisc.model.DataBox"/>
+    
+    <resultMap id="FileResult" class="nFile">
+        <result property="id" column="fle_id"/>
+        <result property="name" column="fle_name"/>
+        <result property="size" column="fle_size"/>
+        <result property="createdDate" column="fle_crtdt"/>
+        <result property="modifiedDate" column="fle_moddt"/>
+        <result property="statType" column="fle_status"/>
+        <result property="mediaId" column="fle_mdid"/>
+    </resultMap>
+    
+	<insert id="saveFile" parameterClass="nFile">
+    <![CDATA[
+        INSERT INTO  tnd_file (fle_id, fle_name, fle_size, fle_crtdt, fle_status, fle_mdid)
+        VALUES (#id#, #name#, #size#, #createdDate#, #statType#, #mediaId#)
+    ]]>
+    </insert>
+
+   <update id="updateFile" parameterClass="nFile">
+    <![CDATA[
+        UPDATE tnd_file 
+        SET    fle_name = #name#, 
+               fle_size = #size#, 
+               fle_status = #statType#,
+               fle_moddt = #modifiedDate#,
+               fle_mdid = #mediaId#
+        WHERE fle_id = #id#
+    ]]>
+    </update>
+
+   <update id="downMediaSize" parameterClass="nFile">
+    <![CDATA[
+        UPDATE tnd_media 
+        SET    md_size = md_size - #size#
+        WHERE md_id = #mediaId#
+    ]]>
+    </update>
+
+   <update id="upMediaSize" parameterClass="nFile">
+    <![CDATA[
+        UPDATE tnd_media 
+        SET    md_size = md_size + #size#
+        WHERE md_id = #mediaId#
+    ]]>
+    </update>
+        
+    <delete id="deleteFile">
+    <![CDATA[
+        DELETE FROM tnd_file
+        WHERE fle_id = #id#
+    ]]>
+    </delete>
+            
+	<select id="getFile" parameterClass = "java.lang.String" resultMap="FileResult">
+    <![CDATA[
+        SELECT fle_id, fle_name, fle_size, fle_crtdt, fle_moddt, fle_status, fle_mdid
+        FROM tnd_file 
+        WHERE fle_id=#id#
+        order by fle_crtdt desc
+    ]]>
+    </select>
+
+	<select id="selectFileListAll" resultMap="FileResult">
+    <![CDATA[
+        SELECT fle_id, fle_name, fle_size, fle_crtdt, fle_moddt, fle_status, fle_mdid
+        FROM tnd_file        
+    ]]>
+    </select>
+
+   <select id="getMediaPathByFile" resultClass="java.lang.String">
+    <![CDATA[
+        SELECT m.md_path
+        FROM tnd_file f, tnd_media m 
+        WHERE f.fle_mdid = m.md_id
+          AND f.fle_id=#id#
+    ]]>
+    </select>
+    
+    <!-- For Explorer -->
+    
+    <select id="selectListByMediaId" parameterClass="java.lang.String" resultMap="FileResult">
+    <![CDATA[
+        SELECT fle_id, fle_name, fle_size, fle_crtdt, fle_moddt, fle_status, fle_mdid
+        FROM tnd_file 
+        WHERE fle_mdid = #mediaId#
+        order by fle_crtdt desc
+    ]]>
+    </select>
+    
+    <select id="selectListByCreateDataAndMediaID" parameterClass="nFile" resultMap="FileResult">
+    <![CDATA[
+        SELECT fle_id, fle_name, fle_size, fle_crtdt, fle_moddt, fle_status, fle_mdid
+        FROM tnd_file 
+        WHERE fle_mdid = #mediaId#
+        and fle_crtdt like '%'||#createdDate#||'%'
+        order by fle_crtdt desc
+    ]]>
+    </select>  
+    
+     <select id="getYear" parameterClass="DataBox" resultClass="DataBox" remapResults="true">
+    <![CDATA[
+        select distinct substr(fle_crtdt, 0, 4) first , substr(fle_crtdt, 0, 4) year, $mediaId$ mediaId 
+        from tnd_file
+        where fle_mdid = $mediaId$
+    ]]>
+    </select> 
+    
+    <select id="getMonth" parameterClass="DataBox" resultClass="DataBox" remapResults="true">
+    <![CDATA[
+        select distinct substr(fle_crtdt, 0, 6) first , substr(fle_crtdt, 5, 2) month, $mediaId$ mediaId 
+        from tnd_file
+        where fle_mdid = $mediaId$ and fle_crtdt like '%$year$%'
+    ]]>
+    </select>  
+    
+    <select id="getDay" parameterClass="DataBox" resultClass="DataBox" remapResults="true">
+    <![CDATA[
+        select distinct substr(fle_crtdt, 0, 8) first , substr(fle_crtdt, 7, 2) day, $mediaId$ mediaId 
+        from tnd_file
+        where fle_mdid = $mediaId$ and fle_crtdt like '%$year_month$%'
+    ]]>
+    </select>      
+        
+</sqlMap>

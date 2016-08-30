@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<properties>
+  <variables>
+    <variable name="home.path" value="D:/dev/workspace_luna/ndisc_mt"/>
+  </variables>
+  <category name="general">
+    <property name="system" value="ACUBE DM"/>
+    <property name="tmp_dir" value="${home.path}/tmp"/>
+    <property name="log_dir" value="${home.path}/log"/>
+    <property name="cipher_key" value="${home.path}/config/NDSecretKey.ser"/>
+  </category>
+  <category name="cache">
+    <property name="cache_dir" value="${home.path}/cache"/>
+    <property name="capacity" value="1000"/>
+    <property name="memory" value="true"/><!-- add OSCache initialized 2014.09.23 -->
+    <property name="algorithm" value="com.opensymphony.oscache.base.algorithm.UnlimitedCache"/><!-- add OSCache initialized 2014.09.23 com.opensymphony.oscache.base.algorithm.UnlimitedCache -->
+    <property name="unlimited_disk" value="true"/><!-- add OSCache initialized 2014.09.23 -->
+    <property name="blocking" value="true"/><!-- add OSCache initialized 2014.09.23 -->
+    <property name="path" value="${home.path}/cache" /><!-- add OSCache initialized 2014.09.23 -->
+    <property name="persistence_class" value="com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener"/><!-- add OSCache initialized 2014.09.23 com.opensymphony.oscache.plugins.diskpersistence.HashDiskPersistenceListener -->
+    <property name="persistence_disk_hash_algorithm" value="MD5" /><!-- add OSCache initialized 2014.09.23 -->
+    <property name="persistence_overflow_only" value="true"/><!-- add OSCache initialized 2014.09.23 -->
+    <property name="event_listeners" value=""/><!-- add OSCache initialized 2014.09.23 com.opensymphony.oscache.plugins.clustersupport.JavaGroupsBroadcastingListener -->
+  </category>
+  <category name="JDBC">  	
+    <!-- JDBC URL 작성시 XML 특수기호 표시에 유의 (& -> &amp;) -->
+<!-- for mysql
+    <property name="URL" value="jdbc:mysql://localhost/ndisc?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8"/>
+    <property name="DRIVER" value="com.mysql.jdbc.Driver"/>
+-->
+<!-- for oracle -->
+    <property name="URL" value="jdbc:oracle:thin:@monkey:1521:ORA11"/>
+    <property name="DRIVER" value="oracle.jdbc.OracleDriver"/>
+
+<!-- for msssql
+    <property name="URL" value="jdbc:inetdae7:70.7.33.161:1433?database=ndiscdb"/>
+    <property name="DRIVER" value="com.inet.tds.TdsDriver"/>
+-->
+
+<!-- for Enterprise DB
+    <property name="URL" value="jdbc:edb://70.7.33.199:5444/ndisc"/>
+    <property name="DRIVER" value="com.edb.Driver"/>
+-->
+
+<!-- for Altibase DB
+    <property name="URL" value="jdbc:Altibase://70.7.103.129:20300/sbms"/>
+    <property name="DRIVER" value="Altibase.jdbc.driver.AltibaseDriver"/>
+-->
+
+<!-- for Tibero DB
+    <property name="URL" value="jdbc:tibero:thin:@70.7.103.129:8629:tibero"/>
+    <property name="DRIVER" value="com.tmax.tibero.jdbc.TbDriver"/>
+-->
+
+
+<!-- for Original NDISC DB Schema -->
+	<!-- DB Password 암호화 여부 2011.11.14 추가
+     - UtilCommand 를 이용하여 DB Password 암호화 
+     - 한번 암호화 한 string을 한번 더 암호화 할 것.. 
+     -->
+	<property name="ENC_FLAG" value="N"/>
+    <property name="USERNAME" value="nd_user"/>
+    <property name="PASSWORD" value="sds000"/>
+    <!-- <property name="PASSWORD" value="nd000"/> -->
+    
+
+<!-- for STORServ DB Schema 
+    <property name="USERNAME" value="storuser"/>
+    <property name="PASSWORD" value="sds000"/>-->
+  </category>
+  <category name="server">
+    <!-- <property name="host" value="70.7.103.106"/>-->
+    <property name="host" value="localhost"/>
+    <property name="port" value="7404"/>
+  </category>
+  <category name="logger">
+    <property name="impl_class_logger" value="com.sds.acube.ndisc.mts.logger.impl.Log4JLogger"/>
+  </category>
+  <category name="inner_filter">
+    <property name="impl_class_comp" value="com.sds.acube.ndisc.mts.filter.impl.DefFltCompress"/>
+    <property name="impl_class_enc" value="com.sds.acube.ndisc.mts.filter.impl.DefFltEncrypt"/>
+  </category>
+  <category name="storage">
+    <!-- for Original NDISC DB Schema -->
+    <property name="impl_class_storage" value="com.sds.acube.ndisc.mts.storage.impl.DefStorage"/>
+    <!-- for STORServ DB Schema
+    <property name="impl_class_storage" value="com.sds.acube.ndisc.mts.storage.impl.StorServStorage"/>-->
+  </category>
+  <category name="process">
+    <property name="impl_class_init" value="com.sds.acube.ndisc.mts.process.impl.ProcInit"/>
+    <property name="impl_class_filereg" value="com.sds.acube.ndisc.mts.process.impl.ProcFileReg"/>
+    <property name="impl_class_fileget" value="com.sds.acube.ndisc.mts.process.impl.ProcFileGet"/>
+    <property name="impl_class_filerep" value="com.sds.acube.ndisc.mts.process.impl.ProcFileRep"/>
+    <property name="impl_class_filedel" value="com.sds.acube.ndisc.mts.process.impl.ProcFileDel"/>
+    <property name="impl_class_filecpy" value="com.sds.acube.ndisc.mts.process.impl.ProcFileCpy"/>
+    <property name="impl_class_filemov" value="com.sds.acube.ndisc.mts.process.impl.ProcFileMov"/>
+    <property name="impl_class_fileinfo" value="com.sds.acube.ndisc.mts.process.impl.ProcFileInfo"/>
+    <property name="impl_class_volinfo" value="com.sds.acube.ndisc.mts.process.impl.ProcVolInfo"/>
+    <property name="impl_class_mkvolume" value="com.sds.acube.ndisc.mts.process.impl.ProcMkVolume"/>
+    <property name="impl_class_mkmedia" value="com.sds.acube.ndisc.mts.process.impl.ProcMkMedia"/>
+    <property name="impl_class_getconf" value="com.sds.acube.ndisc.mts.process.impl.ProcGetConf"/>
+  </category>  
+  
+  <!-- tuning point -->
+  <category name="tuning_point">
+  	<property name="so_trans_tune_apply" value="N"></property>
+  	<property name="so_trans_sleep" value="1"></property>
+  	<property name="so_trans_check_iter" value="10"></property>
+  	<property name="so_procinit_read_cnt" value="5"></property>  
+  </category>
+  
+  <!-- Connection FailOver Setting 2011.08.04-->
+  <category name="connection_failover">   
+         <property name="con_failover_apply" value="N"/>   <!-- 기능 적용 여부 : Y/N -->    
+         <property name="con_failover_target" value="10.41.131.135:8404;10.41.131.136:9404"/>   <!-- FailOver 대상 NDISC 서버 -->
+  </category>
+  
+  <!-- NDISC 구동을 위한 license key 
+  	     값이 없는 경우, 최대 10 번 까지의 파일 오퍼레이션만 가능 해 진다.  
+  -->
+  <category name="license">
+  	<!--  <property name="license_key" value="lj1BH4DB9QffcI_l_3vYbDwiWwQUUt+2" />-->
+    <property name="license_key" value="NIfbGPVNas+D92X7gp4TuQ==" />
+  </category>
+  
+<!-- 2014.04.01 START -->
+ <category name="options">
+ 	<!-- 전송형태 지정 (X : xsocket transfer, M : mapped byte buffer, S : socket fully read, write -->
+ 	<property name="transfer_type" value="M" />
+	<!-- xsocket debug -->
+	<property name="xsocket_debug" value="true" />
+ 	<!-- SSL 사용여부 (주의사항 XNApi에도 SSL 설정이 되어야함) -->
+ 	<property name="use_ssl" value="true" />
+ 	<!-- keytool을 이용하여 생성된 key file(XNApi에도 적용(xnapi-keyfile.jks)해야함) -->
+ 	<property name="ssl_server_key_file" value="xndisc-keyfile.jks" />
+ 	<!-- SSL 인증용 패스워드(keytool에서 인증한 패스워드를 Cipher툴 이용하여 encode, XNApi는 DesCipher 사용) -->
+ 	<property name="ssl_passphrase" value="hXbkJKL+WK8=" />
+ 	<!-- 전송 버퍼 최대 사이즈 지정(기본값 16), 1024 * 값 -->
+ 	<property name="transfer_mapped_bytebuffer_maxsize" value="32" />
+	<!-- 디스패쳐 초기 개수 -->
+ 	<property name="dispatcher_initial_count" value="3" />
+	<!-- 디스패처에서 처리할 핸들러 최대 개수 -->
+ 	<property name="dispatcher_max_handles" value="15" />
+	<!-- 버퍼 다이렉트 옵션 -->
+ 	<property name="readbuffer_usedirect" value="true" />
+	<!-- (core) 프로세서의 개수에 의한 스레드 생성 옵션 -->
+	<property name="multiplication_thread_available_processors" value="Y" /> 	
+	<!-- 오퍼레이션 없을 경우 채널 detach --> 	
+ 	<property name="detach_handle_no_operation" value="true" />
+	<!-- 워크 풀 최대 사이즈 -->
+ 	<property name="workerpool_size" value="15" />
+	<!-- 워크 풀 최소 사이즈 -->
+ 	<property name="workerpool_min_size" value="3" />
+	<!-- 워크 풀 스레드 개수(실제 처리될 스레드 개수임, 스레드 개수가 많아지면 CPU 점유율 높아짐 적절히 조절) -->
+	<!-- Fixed 일 경우 지정값이 가능 프로세서 개수보다 크게 지정되었을 경우 지정한 스레드 개수에 관계없이 가능 프로세서의 수로 재조정됨. -->
+ 	<property name="workerpool_thread_count" value="10" />
+	<!-- 워크풀 타입(F : Fixed, C : Chached), 기본 F, 주의 : Cached 일 경우 CPU 점유율이 높으므로 성능을 보고 결정해야함. -->
+ 	<property name="workerpool_type" value="F" />
+	<!-- 워크 풀 스레드 우선순위 : MAX,NORM,MIN (MAX일 경우 CPU 점유율 높아짐) -->
+	<property name="workpool_thread_priority" value="MAX" />
+ </category>
+<!-- 2014.04.01 END -->
+
+</properties>

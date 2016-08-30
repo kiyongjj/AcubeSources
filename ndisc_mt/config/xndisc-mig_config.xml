@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<properties>
+  <category name="stor-api">
+    <property name="stor-api-type" value="pure_java"/>
+    <property name="stor-svr-type" value="unix"/>
+  </category>
+  <category name="mig-info">
+  	<property name="tmp-dir" value="./"/>
+  	<property name="mig-table" value="S2N_MIG" />
+  </category>
+  <category name="stor-server">
+    <property name="stor-host" value="70.7.33.152"/>
+    <property name="stor-port" value="8995"/>
+    <property name="stor-media" value="101"/>
+    <property name="stor-get-count" value="100" /> 
+  </category>
+  <category name="stor-jdbc">
+    <property name="driver" value="oracle.jdbc.OracleDriver"/>
+    <property name="url" value="jdbc:oracle:thin:@70.7.33.180:1521:ora9"/>
+    <property name="user" value="nd_user"/>
+    <property name="password" value="sds000"/>
+  </category>
+  <category name="ndisc-server">
+    <property name="ndisc-host" value="70.7.33.152"/>
+    <property name="ndisc-port" value="7404"/>
+    <property name="ndisc-volume" value="101"/>
+    <property name="ndisc-status" value="0"/>   <!-- {R : remain} {0 : no} {1 : comp} {2 : enc} {3 : comp+enc} -->
+    <property name="xnapi-ssl" value="false" />
+    <property name="xnapi-keyfile" value="xnapi-keyfile.jks"  />
+    <property name="xnapi-keypwd" value="7eau4E0t1U0="  />
+  </category>
+</properties>

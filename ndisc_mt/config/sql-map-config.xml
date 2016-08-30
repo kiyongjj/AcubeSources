@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+  <!--  properties resource="com/sds/acube/ndisc/dao/config/database.properties"/ -->
+
+  <settings
+    cacheModelsEnabled="true"
+    enhancementEnabled="true"
+    maxSessions="64"
+    maxTransactions="8"
+    maxRequests="128"/>
+
+  <transactionManager type="JDBC">
+    <dataSource type="SIMPLE">
+      <property value="${DRIVER}" name="JDBC.Driver"/>
+      <property value="${URL}" name="JDBC.ConnectionURL"/>
+      <property value="${USERNAME}" name="JDBC.Username"/>
+      <property value="${PASSWORD}" name="JDBC.Password"/>
+      <property value="15" name="Pool.MaximumActiveConnections"/>
+      <property value="15" name="Pool.MaximumIdleConnections"/>
+      <property value="1000" name="Pool.MaximumWait"/>
+    </dataSource>
+  </transactionManager>
+  
+ 	<!-- Identify all SQL Map XML files to be loaded by this SQL map. Relative to classpath -->
+   <!-- SQL Map For NDISC schema -->
+  <sqlMap resource="com/sds/acube/ndisc/dao/${SCHEMATYPE}/FileSQL.xml" />
+   <sqlMap resource="com/sds/acube/ndisc/dao/${SCHEMATYPE}/MediaSQL.xml" />
+   <sqlMap resource="com/sds/acube/ndisc/dao/${SCHEMATYPE}/VolumeSQL.xml" />
+   <!--
+   <sqlMap resource="com/sds/acube/ndisc/dao/sql/QueueSQL.xml" />
+   <sqlMap resource="com/sds/acube/ndisc/dao/sql/StatSQL.xml" />
+   -->
+   <!-- SQL Map For STORServ schema  
+   <sqlMap resource="com/sds/acube/ndisc/dao/sqlForStorServ/FileSQL.xml" />
+   <sqlMap resource="com/sds/acube/ndisc/dao/sqlForStorServ/MediaSQL.xml" />
+   <sqlMap resource="com/sds/acube/ndisc/dao/sqlForStorServ/VolumeSQL.xml" />   
+   -->
+</sqlMapConfig>
