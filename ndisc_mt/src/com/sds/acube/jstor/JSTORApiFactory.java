@@ -68,6 +68,9 @@ public class JSTORApiFactory {
 		} else {
 			strNDiscCache = System.getProperty("ndisc_cache", "false").toLowerCase();
 		}
+		System.out.println("Kiyong TEST JSTORApiFactory.java strApiType ::: " + strApiType);
+		System.out.println("Kiyong TEST JSTORApiFactory.java strSvrType ::: " + strSvrType);
+		System.out.println("Kiyong TEST JSTORApiFactory.java strNDiscCache ::: " + strNDiscCache);
 		if (null == strApiType) { // Default jni
 			strApiType = "jni";
 		}

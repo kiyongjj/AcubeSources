@@ -260,6 +260,7 @@ public class XNApi extends XNApiBase {
 	public String[] XNDISC_FileReg(NFile[] nFile) throws FileException, NetworkException, NDiscException {
 		String fileids[] = null;
 		connection.setAutoflush(false);
+		System.out.println("Kiyong TEST XNApi.java XNDISC_FileReg()");
 		try {
 			if (debug) {
 				logger.debug("*** [" + connection.getId() + "] [" + connection.getLocalAddress().getHostAddress() + ":" + connection.getLocalPort() + "] makeRegInfo start");

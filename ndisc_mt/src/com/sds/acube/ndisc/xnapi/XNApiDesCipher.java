@@ -91,7 +91,7 @@ public class XNApiDesCipher {
 		
 		String enc = encrypt(data);
 		System.out.println("encrypt : " + enc);
-		String dec = decrypt(enc);
+		String dec = decrypt("7eau4E0t1U0=");
 		System.out.println("decrypt : " + dec);
 	}	
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="euc-kr" ?>
 <properties>
   <variables>
-    <variable name="home.path" value="D:/dev/workspace_luna/ndisc_mt"/>
+    <variable name="home.path" value="D:/dev/git_repository/AcubeSources/ndisc_mt"/>
   </variables>
   <category name="general">
     <property name="system" value="ACUBE DM"/>

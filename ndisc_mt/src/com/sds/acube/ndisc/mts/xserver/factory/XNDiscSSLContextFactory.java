@@ -67,6 +67,8 @@ public final class XNDiscSSLContextFactory {
 		try {
 			String serverkeyfile = getKeyFile(XNDiscConfig.getString(XNDiscConfig.SSL_SERVER_KEY_FILE, "xndisc-keyfile.jks"));
 			String ps = XNDiscCipher.decode(XNDiscConfig.getString(XNDiscConfig.SSL_PASSPHRASE, "hXbkJKL+WK8="));
+			System.out.println("Kiyong TEST XNDiscSSLContextFactory.java getSSLContext() serverkeyfile :::: " + serverkeyfile);
+			System.out.println("Kiyong TEST XNDiscSSLContextFactory.java getSSLContext() ps :::: " + ps);
 			char passphrase[] = ps.toCharArray();
 			KeyStore ks = KeyStore.getInstance("JKS");
 			ks.load(new FileInputStream(serverkeyfile), passphrase);
