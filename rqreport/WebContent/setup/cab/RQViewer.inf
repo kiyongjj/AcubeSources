@@ -1,0 +1,6 @@
+[Version]
+PLATFORM=Windows
+RQViewer=1,1,1,0315
+
+[RegOptions]
+MaxViewer=4

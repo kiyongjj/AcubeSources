@@ -1,0 +1,27 @@
+#REQUBE2006 WebServer properties
+#Tue Jan 16 22:25:24 KST 2007
+rqreport.engine.rsep=9
+rqreport.engine.thread=20
+rqreport.repository.docTableName=RQDoc
+rqreport.engine.cache_size=20
+rqreport.repository.doc_dsTableName=RQDocDs
+rqreport.repository.userTableName=RQUser
+rqreport.repository.sqlTableName=RQSQL
+rqreport.repository.path=D:/dev/git_repository/AcubeSources/rqreport/repository
+rqreport.engine.ssep=5
+rqreport.engine.csep=10
+rqreport.repository.jndi=jdbc/Repository
+rqreport.engine.timeout=600
+rqreport.engine.time_wait=30
+
+
+#;jdbc\:odbc\:RQRepositoryDB
+rqreport.repository.install_id=install
+rqreport.repository.install_pw=test
+#file upload limit size 50M 
+rqreport.common.uploadPrc.filelimit=60
+#Server Type weblogic=1, tomcat=2, sun-one,jeus=3
+rqreport.server.type=2
+rqreport.server.RQcharset=EUC-KR
+rqreport.server.charset=8859_1
+rqreport.server.SSO=no

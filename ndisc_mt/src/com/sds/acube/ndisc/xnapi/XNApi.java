@@ -260,7 +260,6 @@ public class XNApi extends XNApiBase {
 	public String[] XNDISC_FileReg(NFile[] nFile) throws FileException, NetworkException, NDiscException {
 		String fileids[] = null;
 		connection.setAutoflush(false);
-		System.out.println("Kiyong TEST XNApi.java XNDISC_FileReg()");
 		try {
 			if (debug) {
 				logger.debug("*** [" + connection.getId() + "] [" + connection.getLocalAddress().getHostAddress() + ":" + connection.getLocalPort() + "] makeRegInfo start");
@@ -298,9 +297,7 @@ public class XNApi extends XNApiBase {
 				logger.debug("*** [" + connection.getId() + "] [" + connection.getLocalAddress().getHostAddress() + ":" + connection.getLocalPort() + "] sendRegInfo end");
 			}
 
-			System.out.println("Kiyong TEST XNapi.java XNDISC_FileReg 1 XNApiConfig.REPLY_BUFFER_SIZE ::: " + XNApiConfig.REPLY_BUFFER_SIZE);
 			String rcvmsg = connection.readStringByLength(XNApiConfig.REPLY_BUFFER_SIZE);
-			System.out.println("Kiyong TEST XNapi.java XNDISC_FileReg 2 rcvmsg ::: " + rcvmsg);
 			rcvmsg = XNApiUtils.getReplyMessage(rcvmsg);
 			if (XNApiConfig.NO_ERROR.equals(rcvmsg)) {
 				if (debug) {

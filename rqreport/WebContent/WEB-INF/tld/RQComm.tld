@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE taglib
+       PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+       "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+<tlibversion>1.0.0.0</tlibversion>
+<jspversion>1.0</jspversion>
+<shortname>rqcomm</shortname>
+<info></info>
+
+<tag>
+	<name>reqEncode</name>
+	<tagclass>com.sds.rqreport.service.RQView</tagclass>
+</tag>
+
+<tag>
+	<name>rqComm</name>
+	<tagclass>com.sds.rqreport.service.RQView</tagclass>
+	<attribute>
+		<name>action</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>driver</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>conn</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>sid</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>spass</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>sql</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>strXml</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>stmtidx</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>strKey</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>strDBInfo</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>encqry</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>doc</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>runvar</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>dbidx</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+</tag>
+
+</taglib>

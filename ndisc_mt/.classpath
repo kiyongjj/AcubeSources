@@ -25,5 +25,6 @@
 	<classpathentry kind="lib" path="lib/fasoo-packager-acube.jar"/>
 	<classpathentry kind="lib" path="lib/libMarkanyMaSaferJava.jar"/>
 	<classpathentry kind="lib" path="lib/scsl.jar"/>
+	<classpathentry kind="lib" path="config"/>
 	<classpathentry kind="output" path="classes"/>
 </classpath>

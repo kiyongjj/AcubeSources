@@ -68,15 +68,14 @@ public class JSTORApiFactory {
 		} else {
 			strNDiscCache = System.getProperty("ndisc_cache", "false").toLowerCase();
 		}
-		System.out.println("Kiyong TEST JSTORApiFactory.java strApiType ::: " + strApiType);
-		System.out.println("Kiyong TEST JSTORApiFactory.java strSvrType ::: " + strSvrType);
-		System.out.println("Kiyong TEST JSTORApiFactory.java strNDiscCache ::: " + strNDiscCache);
 		if (null == strApiType) { // Default jni
 			strApiType = "jni";
 		}
 		if (null == strSvrType) { // Default unix
 			strSvrType = "unix";
 		}
+		System.out.println("Kiyong TEST JSTORApiFactory.java getInstance strApiType ::: " + strApiType);
+		System.out.println("Kiyong TEST JSTORApiFactory.java getInstance strSvrType ::: " + strSvrType);
 		if ("jni".equals(strApiType)) {
 			if (jstorC.empty()) {
 				for (int i = 0; i < POOL_SIZE; i++)

@@ -1,0 +1,16 @@
+
+///// URL Encoding , Decoding ///////////////////////////////////////////
+
+String str = "테스트";
+String enc_str = java.net.URLEncoder.encode(str,"UTF-8");
+System.out.println(enc_str);
+String dec_str = java.net.URLDecoder.decode(enc_str,"UTF-8");
+
+// 밑에 처럼 복원화하면 정상복원이 안돼야 하지만 되는 시스템이 있는듯 하다.  
+//String dec_str = java.net.URLDecoder.decode(enc_str,"EUC-KR");
+//
+
+System.out.println(dec_str);
+
+//////////////////////////////////////////////////////////////////////////
+

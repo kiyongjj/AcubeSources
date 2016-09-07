@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE taglib
+       PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+       "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+<tlibversion>1.0.0.0</tlibversion>
+<jspversion>1.0</jspversion>
+<shortname>rqHandler</shortname>
+<info></info>
+
+<tag>
+	<name>rqHandler</name>
+	<tagclass>com.sds.rqreport.service.web.RQSchedulehandle</tagclass>
+	<attribute>
+		<name>action</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>listModel</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>scheduleInfo</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+</tag>
+<tag>
+	<name>rqHandler_runinfolist</name>
+	<tagclass>com.sds.rqreport.service.web.RQSchedulehandle</tagclass>
+	<attribute>
+		<name>action</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>scheduleidx</name>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+</tag>
+</taglib>

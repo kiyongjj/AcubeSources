@@ -1,0 +1,24 @@
+<html>
+<head><title> MIS Test </title>
+<script language="javaScript">
+<!--
+	function goSession() {
+		var rrtn = EpAdmC.GetSecureBox();
+		if(rrtn != "") {
+			form1.totaldata.value = rrtn;
+			form1.submit();
+	  	} else {
+			alert('mySingle login pleaze..');
+			return;
+		}
+        }
+//-->
+</script>
+</head>
+<body onLoad="javascript:goSession()">
+<OBJECT ID="EpAdm2 Control" name="EpAdmC" CLASSID="CLSID:C63E3330-049F-4C31-B47E-425C84A5A725"></OBJECT>
+	<form name="form1" method="post" action="site_connect.jsp">
+		<input type="hidden" name="totaldata" value="">
+	</form>
+</body>
+</html>

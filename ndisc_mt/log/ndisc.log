@@ -7470,3 +7470,77 @@ Category=JDBC
 │                                                                                          │
 └------------------------------------------------------------------------------------------┘
 
+[ndisc] [2016 9월 05 19:03:33] INFO [main] ndisc.log(66) | 
+┌------------------------------------------------------------------------------------------┐
+│                                                                                          │
+│                    XNDisc Server (Version : XNDisc 1.0.1(2014-04-01))                    │
+│                                                                                          │
+│                          Listening on 127.0.0.1(127.0.0.1):7404                          │
+│                                                                                          │
+│                               Start on 2016 09-05 19:03:33                               │
+│                                                                                          │
+├--------------------------------- XNDisc Server Options ----------------------------------┤
+│                                                                                          │
+│       Use SSL : true                                                                     │
+│       Dispatcher Initial Size : 3                                                        │
+│       Dispatcher maximum Handle Size : 15                                                │
+│       Read Buffer Use Direct : true                                                      │
+│       Worker Pool Thread Priority : MAX                                                  │
+│       Worker Pool minimun Size : 3                                                       │
+│       Worker Pool maximum Size : 15                                                      │
+│       Thread Pool Type : Fixed                                                           │
+│       Thread Pool Size : 40                                                              │
+│                                                                                          │
+├------------------------------------------------------------------------------------------┤
+│       OS Architecture   : x86                                                            │
+│       OS Name           : Windows 8                                                      │
+│       OS Version        : 6.2                                                            │
+│       Processors        : 4(s)                                                           │
+└------------------------------------------------------------------------------------------┘
+
+[ndisc] [2016 9월 05 19:03:33] INFO [main] ndisc.log(66) | 
+┌------------------------------------------------------------------------------------------┐
+│                                                                                          │
+│                    XNDisc Server (Version : XNDisc 1.0.1(2014-04-01))                    │
+│                                                                                          │
+│                          Listening on 127.0.0.1(127.0.0.1):7404                          │
+│                                                                                          │
+│                               Start on 2016 09-05 19:03:33                               │
+│                                                                                          │
+├--------------------------------- XNDisc Server Options ----------------------------------┤
+│                                                                                          │
+│       Use SSL : true                                                                     │
+│       Dispatcher Initial Size : 3                                                        │
+│       Dispatcher maximum Handle Size : 15                                                │
+│       Read Buffer Use Direct : true                                                      │
+│       Worker Pool Thread Priority : MAX                                                  │
+│       Worker Pool minimun Size : 3                                                       │
+│       Worker Pool maximum Size : 15                                                      │
+│       Thread Pool Type : Fixed                                                           │
+│       Thread Pool Size : 40                                                              │
+│                                                                                          │
+├------------------------------------------------------------------------------------------┤
+│       OS Architecture   : x86                                                            │
+│       OS Name           : Windows 8                                                      │
+│       OS Version        : 6.2                                                            │
+│       Processors        : 4(s)                                                           │
+└------------------------------------------------------------------------------------------┘
+
+[ndisc] [2016 9월 05 19:03:33] INFO [main] ndisc.log(66) | 
+┌-------------------------------- XNDisc Server Notice !!! --------------------------------┐
+│                                                                                          │
+│Readjust the number of the Worker Thread Pool,                                            │
+│                                                                                          │
+│Original Thread Pool Size : 10 => Changed Thread Pool Size : 40                           │
+│                                                                                          │
+└------------------------------------------------------------------------------------------┘
+
+[ndisc] [2016 9월 05 19:03:33] INFO [main] ndisc.log(66) | 
+┌-------------------------------- XNDisc Server Notice !!! --------------------------------┐
+│                                                                                          │
+│Readjust the number of the Worker Thread Pool,                                            │
+│                                                                                          │
+│Original Thread Pool Size : 10 => Changed Thread Pool Size : 40                           │
+│                                                                                          │
+└------------------------------------------------------------------------------------------┘
+

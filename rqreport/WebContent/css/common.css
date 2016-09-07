@@ -1,0 +1,225 @@
+BODY { FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: "dotum","Verdana"; }
+SELECT {FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: "dotum","Verdana"; }
+
+/* List Hyperlink Style */
+A.list:link { font-size:9pt; font-family:"dotum","Verdana"; color:#FF0000; text-decoration:none; }
+A.list:visited { font-size:9pt; font-family:"dotum","Verdana"; color:#5C5C5C; text-decoration:none; }
+A.list:active { font-size:9pt; font-family:"dotum","Verdana"; color:#007BA4; text-decoration:none; }
+A.list:hover { font-size:9pt; font-family:"dotum","Verdana"; color:#007BA4; text-decoration:none;}
+
+/*menu Style */
+A.menuon:link { font-size:9pt; font-family:"dotum","Verdana"; color:#FFFECC;  text-decoration:none;   font-weight: bold;  padding-right: 8px; padding-top: 1px; }
+A.menuon:visited { font-size:9pt; font-family:"dotum","Verdana";color:#FFFECC;  text-decoration:none;  font-weight: bold;  padding-right: 8px; padding-top:1px; }
+A.menuon:active { font-size:9pt; font-family:"dotum","Verdana"; color:#FFFECC; text-decoration:none;  font-weight: bold; padding-right: 8px; padding-top: 1px; }
+A.menuon:hover { font-size:9pt; font-family:"dotum","Verdana"; color:#FFFECC;  text-decoration:none;  font-weight: bold; padding-right: 8px; padding-top: 1px; }
+
+A.menuoff:link { font-size:9pt; font-family:"dotum","Verdana"; color:#ffffff;  text-decoration:none;  padding-right: 8px; padding-top: 1px; }
+A.menuoff:visited { font-size:9pt; font-family:"dotum","Verdana";color:#ffffff;  text-decoration:none;  padding-right: 8px; padding-top:1px; }
+A.menuoff:active { font-size:9pt; font-family:"dotum","Verdana"; color:#ffffff; text-decoration:none;  padding-right: 8px; padding-top: 1px; }
+A.menuoff:hover { font-size:9pt; font-family:"dotum","Verdana"; color:#FFFECC;  text-decoration:none;  padding-right: 8px; padding-top: 1px; }
+
+A.path01:link { font-size:9pt; font-family:"dotum","Verdana"; color:#000000;  text-decoration:none; }
+A.path01:visited { font-size:9pt; font-family:"dotum","Verdana";color:#000000;  text-decoration:none; }
+A.path01:active { font-size:9pt; font-family:"dotum","Verdana"; color:#000000; text-decoration:none; }
+A.path01:hover { font-size:9pt; font-family:"dotum","Verdana"; color:#F37F04;  text-decoration:none;}
+
+A.path02:link { font-size:9pt; font-family:"dotum","Verdana"; color:#F37F04;  text-decoration:none; }
+A.path02:visited { font-size:9pt; font-family:"dotum","Verdana";color:#F37F04;  text-decoration:none; }
+A.path02:active { font-size:9pt; font-family:"dotum","Verdana"; color:#F37F04; text-decoration:none; }
+A.path02:hover { font-size:9pt; font-family:"dotum","Verdana"; color:#FF0000;  text-decoration:none; }
+
+
+/* Table Style */
+.title {font-size:11pt; font-weight: bold;  font-family:"dotum","Verdana"; color:#000000;  padding-left: 7px;  letter-spacing: -1px;}
+.table_title {font-size: 9pt; font-weight: bold; color: #587A26; padding-top: 3px;	background-color:#FAFAFA; text-align: center; font-family: "dotum","Verdana";}
+.stitle {font-size: 9pt; font-weight: normal; color: #5396B3; padding-top: 3px;	background-color:#F8F9FB; text-align: center;font-family: "dotum","Verdana";}
+.stitle01 {	font-size: 9pt;	font-weight: normal; color: #5396B3; padding-top: 3px; background-color:#F8F9FB; font-family: "dotum","Verdana"; padding-left: 15px;}
+.text { font-size: 9pt;	color: #828282;	padding-left: 10px;	padding-right: 10px; padding-left: 10px; padding-right: 10px; padding-top: 3px;	text-align: center;	font-family: "dotum","Verdana";	height: 26px; }
+.navi { font-size: 10pt; font-weight: bold; color: #5396B3; padding-top: 3px; background-color: #FFFFFF; text-align: center; font-family: Verdana; }
+
+A.tabletext:link { font-size:9pt; font-family:"dotum","Verdana"; color:#666666;  text-decoration:none; }
+A.tabletext:visited { font-size:9pt; font-family:"dotum","Verdana";color:#666666 ;  text-decoration:none; }
+A.tabletext:active { font-size:9pt; font-family:"dotum","Verdana";	color:#666666; text-decoration:none; }
+A.tabletext:hover { font-size:9pt; font-family:"dotum","Verdana"; color:#F26522 ; text-decoration:none; }
+
+A.tablenav:link { font-size:9pt; font-family: verdana; color:#555555;  text-decoration:none; padding-left: 1px; padding-right: 1px; }
+A.tablenav:visited { font-size:9pt; font-family: verdana; color:#555555 ;  text-decoration:none; padding-left: 1px; padding-right: 1px; }
+A.tablenav:active { font-size:9pt; font-family: verdana;	color:#555555; text-decoration:none; padding-left: 1px; padding-right: 1px; }
+A.tablenav:hover { font-size:9pt; font-family: verdana; color:#F26522 ; text-decoration:none; padding-left: 1px; padding-right: 1px; }
+
+A.envir_text:link { font-size:9pt; font-family:"dotum","Verdana"; color:#415515;  text-decoration:none; padding-left: 5px; }
+A.envir_text:visited { font-size:9pt; font-family:"dotum","Verdana";color:#415515 ;  text-decoration:none; padding-left: 5px; }
+A.envir_text:active { font-size:9pt; font-family:"dotum","Verdana";	color:#415515; text-decoration:none; padding-left: 5px; }
+A.envir_text:hover { font-size:9pt; font-family:"dotum","Verdana"; color:#F26522 ; text-decoration:none; padding-left: 5px; }
+
+
+/* button Style */
+.btn_text_td { padding-top: 3px;}
+
+A.btn_white:link { font-size:9pt; font-family:"dotum","Verdana"; color:#487D1A; text-decoration:none;}
+A.btn_white:visited { font-size:9pt; font-family:"dotum","Verdana"; color:#487D1A; text-decoration:none;}
+A.btn_white:active { font-size:9pt; font-family:"dotum","Verdana"; color:#487D1A; text-decoration:none;}
+A.btn_white:hover { font-size:9pt; font-family:"dotum","Verdana"; color:#FF6C00; text-decoration:none;}
+
+A.btn_green:link { font-size:9pt; font-family:"dotum","Verdana"; color:#ffffff; text-decoration:none;}
+A.btn_green:visited { font-size:9pt; font-family:"dotum","Verdana"; color:#ffffff; text-decoration:none;}
+A.btn_green:active { font-size:9pt; font-family:"dotum","Verdana"; color:#ffffff; text-decoration:none;}
+A.btn_green:hover { font-size:9pt; font-family:"dotum","Verdana"; color:#FEFF98;  text-decoration:none;}
+
+/*Popup Style*/
+.popuptitle { font-size: 10pt; color: #FFFFFF; text-decoration:none; letter-spacing: 0px;  font-family: "dotum","Verdana"; text-align: left; font-weight: bold;}
+.popupstitle {font-size: 9pt; font-weight: bold; color: #587A26; padding-top: 3px;	background-color:#ECF4E1; text-align: center;font-family: "dotum","Verdana";}
+.input_td { padding-left: 10px; padding-right:10px; padding-bottom: 3px;padding-top: 3px;}
+.input {font-family: "dotum","Verdana"; font-size: 9pt; color: #666666; border: 1px solid #a0d1d6; padding-left: 10px; padding-right: 10px;}
+.inputselect { font-family: "dotum","Verdana"; font-size: 9pt; color: #666666; border: 1px solid #B8CF7F; padding-left: 10px; padding-right: 10px; width: 165px;}
+.inputselect02 { font-family: "dotum","Verdana"; font-size: 9pt; color: #666666; border: 1px solid #B8CF7F; padding-left: 10px; padding-right: 10px; width: 202px;}
+.popuptext { padding-left: 6px; padding-right: 10px; font-family: "dotum","Verdana"; font-size: 9pt; color: #415515;}
+
+/* navigation by ljg*/
+A.navi:link { font-size:10pt; font-family:Verdana; color:#5396B3; text-decoration:none;}
+A.navi:visited { font-size:10pt; font-family:Verdana; color:#5396B3; text-decoration:none;}
+A.navi:active { font-size:10pt; font-family:Verdana; color:#5396B3; text-decoration:none;}
+A.navi:hover { font-size:10pt; font-family:Verdana; color:#FF6C00; text-decoration:none;}
+
+A.envlist:link { font-size:10pt; font-weight: bold; font-family:Verdana; color:#56729E; text-decoration:none;}
+A.envlist:visited { font-size:10pt; font-weight: bold; font-family:Verdana; color:#56729E; text-decoration:none;}
+A.envlist:active { font-size:10pt; font-weight: bold; font-family:Verdana; color:#56729E; text-decoration:none;}
+A.envlist:hover { font-size:10pt;  font-weight: bold;font-family:Verdana; color:#FF6C00; text-decoration:none;}
+
+A.filename:link { font-size:9pt; font-family:Verdana; color:#487D1A; text-decoration:none;}
+A.filename:visited { font-size:9pt; font-family:Verdana; color:#487D1A; text-decoration:none;}
+A.filename:active { font-size:9pt; font-family:Verdana; color:#487D1A; text-decoration:none;}
+A.filename:hover { font-size:9pt; font-family:Verdana; color:#FF6C00; text-decoration:none;}
+
+form { display : inline; }
+
+form.mkf input, form.attform input { font-family: Verdana; padding-left: 5px; margin: 1px 1px 1px 1px; background-image:url('');border: 1px solid #898989;background-repeat: repeat-x; }
+form.mkf button {padding: 0px 0px 0px 0px;}
+
+.border_C		 { border: 1px solid #c6d3f3; }
+.border_F		 { border: 2px solid #FFFFFF; }
+
+.envlistdetail { font-size:8pt; font-family:Verdana; color:#686868; text-decoration:none;}
+
+/* login page */
+.maintext {font-size: 9pt;	font-weight: normal;	color: #888888;	font-family: "dotum","Verdana";	text-decoration:none;	line-height: 15px;}
+
+
+/*** NEW ***/
+.login_bg{
+background-image:url('../img/login_bg.gif');background-repeat: repeat-x;
+}
+.login_ccbg{
+background-image:url('../img/login_ccbg.gif');background-repeat: no-repeat;
+}
+.login_bgc{
+background-image:url('../img/login_cebg.gif');background-repeat: no-repeat;
+}
+.main_bg{
+background-image:url('../img/main_bg.gif');background-repeat: repeat-x;
+}
+.main_lbg{
+background-image:url('../img/main_l_bg.jpg');background-repeat: no-repeat; 
+}
+.main_menubg{
+background-image:url('../img/main_menu_bg.gif');background-repeat: no-repeat; 
+}
+.main_menubgb{
+background-image:url('../img/main_menu_bg_b.gif');background-repeat: repeat-y; 
+}
+.main_conbgtop{
+background-image:url('../img/main_con_bg_img.gif');background-repeat: no-repeat; 
+}
+.main_conbgtop2{
+background-image:url('../img/main_con_bg_img02.gif');background-repeat: no-repeat; 
+}
+.main_conbgtop3{
+background-image:url('../img/main_con_bg_img03.gif');background-repeat: no-repeat; 
+}
+.main_conbgtop4{
+background-image:url('../img/main_con_bg_img04.gif');background-repeat: no-repeat; 
+}
+.main_conbgtop5{
+background-image:url('../img/main_con_bg_img05.gif');background-repeat: no-repeat; 
+}
+.main_conbgtop6{
+background-image:url('../img/main_con_bg_img06.gif');background-repeat: no-repeat; 
+}
+.main_conbg{
+background-image:url('../img/main_con_bg.gif');background-repeat: repeat-y; 
+}
+.main_conbgb{
+background-image:url('../img/main_con_bg_b.gif');background-repeat: no-repeat; 
+}
+
+.p_text {font-size: 11pt;	font-weight: bold;	color: #ff239a;	font-family: "dotum","Verdana";	text-decoration:none;	line-height: 15px;}
+.comment_text {font-size: 9pt;	font-weight: normal;	color: #708488;	font-family: "dotum","Verdana";	text-decoration:none;	line-height: 15px;}
+.n_navi { font-size: 10pt; font-weight: bold; color: #ff239a; padding-left: 10px; background-color: #e7ebed; text-align: left; font-family: Verdana; }
+
+A.n_navi:link { font-size:10pt; font-family:Verdana; color:#ff239a; text-decoration:none; background-color: #e7ebed;}
+A.n_navi:visited { font-size:10pt; font-family:Verdana; color:#ff239a; text-decoration:none; background-color: #e7ebed;}
+A.n_navi:active { font-size:10pt; font-family:Verdana; color:#ff239a; text-decoration:none; background-color: #e7ebed;}
+A.n_navi:hover { font-size:10pt; font-family:Verdana; color:#000000; text-decoration:none; background-color: #e7ebed;}
+
+
+
+.rqenv_kr
+{
+font-size:9pt; font-family:"dotum","Verdana"; color:#000000; text-decoration:none;line-height:26px;
+}
+.rqenv_en
+{
+ font-size:9pt; font-family:Verdana; color:#000000; text-decoration:none;
+ }
+.rqenv_input01
+{
+border-color:#CCCCCC;border:1px;background-color: #EEEEEE;
+}
+
+/*** POPUP_NEW class***/
+.popuptitle_b { font-size: 11pt; color: #FFFFFF; text-decoration:none; letter-spacing: -1px;  font-family: "dotum","Verdana"; text-align: left; font-weight: bold;padding-top:16px;}
+
+.pop_title { font-size: 10pt; color: #FFFFFF; text-decoration:none; letter-spacing: 0px;  font-family: "dotum","Verdana";  font-weight: bold;}
+
+.input_td_btn { padding-top: 2px; padding-left: 10px; padding-right:10px;}
+
+.input_btntxt { padding-top: 2px; padding-left: 10px; padding-right:10px; font-weight: bold; font-family: "dotum","Verdana";font-size: 9pt; color:#ffffff;}
+
+A.input_btntxt:link { font-weight: bold; font-family: "dotum","Verdana";font-size: 9pt; color:#ffffff; text-decoration:none;}
+A.input_btntxt:visited{ font-weight: bold; font-family: "dotum","Verdana";font-size: 9pt; color:#ffffff; text-decoration:none;}
+A.input_btntx:active { font-weight: bold; font-family: "dotum","Verdana";font-size: 9pt; color:#ffffff; text-decoration:none;}
+A.input_btntxt:hover { font-weight: bold; font-family: "dotum","Verdana";font-size: 9pt; color:#dff1ff; text-decoration:none;}
+
+.input03 { font-family: "dotum","Verdana";	font-size: 9pt;	color: #666666; border: 1px solid #B3CED2; padding-left: 10px; padding-right: 10px; }
+SELECT.select03 { font-family: "dotum","Verdana";	font-size: 9pt;	color: #666666; border: 1px solid #B3CED2; padding-left: 10px; padding-right: 10px;}
+.pop_bar { height:2; background-color: #A0D1D6;}
+.pop_wbar { background-color: #A0D1D6;}
+
+.stitle_b {font-size: 9pt; font-weight: bold; color: #5396B3; padding-top: 3px;	background-color:#F8F9FB; text-align: center;font-family: "dotum","Verdana";}
+
+A.btn_green:link { font-size:9pt; font-family:"dotum","Verdana"; color:#3b3b3b; text-decoration:none;}
+A.btn_green:visited { font-size:9pt; font-family:"dotum","Verdana"; color:#3b3b3b; text-decoration:none;}
+A.btn_green:active { font-size:9pt; font-family:"dotum","Verdana"; color:#3b3b3bf; text-decoration:none;}
+A.btn_green:hover { font-size:9pt; font-family:"dotum","Verdana"; color:#0091cd;  text-decoration:none;}
+
+.logtext { font-size: 8pt; color: #000000; font-family: "Verdana"; }
+.stitle_ser {font-size: 9pt; font-weight: normal; color: #5396B3; padding-top: 3px;	text-align: center;font-family: "dotum","Verdana";}
+
+/**Calendar CSS**/
+td { font-family: "Verdana"; font-size: 9pt; color: #4F4F4F;}
+
+.calyoil{ font-family:"Verdana"; font-size:9pt; color:#000000; text-align:center; font-weight:bold;padding-top:2px;}
+.calarrow {cursor:hand;}
+
+.cal01{ font-family:"Verdana"; font-size:9pt; color:#666666; text-align:center;cursor:hand; height:22px;}
+.cal02{ font-family:"Verdana"; font-size:9pt; color:#0000FF; text-align:center;cursor:hand; height:22px;}
+.cal03{ font-family:"Verdana"; font-size:9pt; color:#FF0000; text-align:center;cursor:hand; height:22px;}
+.calgray{ font-family:"Verdana"; font-size:9pt; color:#BBBBBB; text-align:center;height:22px;}
+.calda01{ font-family:"Verdana"; font-size:9pt; font-weight: bold; color:#666666;clip:rect();}
+.calto {font-family: "Verdana";font-size: 9pt;font-weight: bold;color:#666666;text-align:center; clip:rect();}
+.caltimediv {position:absolute;cursor:hand;border:1 solid #d3d3d3;background-color:white;padding:3; font-family: "Verdana";font-size: 8pt;font-weight: normal;color:#666666; text-align:center; clip:rect();}
+
+/* document *****/
+table.doclisttable tr.odd_row {	background-color: #EBEBEB;}
+table.doclisttable tr.even_row { background-color: #F4F4F4;}
+table.doclisttable tr.odd_row:hover, table.doclisttable tr.even_row:hover {	background-color: #FFFFAA;}

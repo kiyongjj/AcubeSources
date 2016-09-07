@@ -171,6 +171,7 @@ public class XNDiscXNApi extends JSTORApi {
 	 */
 	@Override
 	public int JSTOR_Connect(String sIPAddr, int nPortNo) {
+		System.out.println("Kiyong TEST XNDiscXNApi.java JSTOR_Connect()");
 		int nConnId = -1;
 		xnapi = new XNApi(useCache);
 		try {

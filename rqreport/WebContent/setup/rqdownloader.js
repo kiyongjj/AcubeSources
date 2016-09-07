@@ -1,0 +1,2 @@
+document.write('<object id="RQViewerdownloader" classid="clsid:B23DAF25-D4FC-4dbd-8472-C8216C54818F" codebase="/rqreport/setup/cab/RQDownLoader.cab#version=1,1,0,4" WIDTH="0" HEIGHT="0">'); 
+document.write('</object>');

@@ -315,8 +315,7 @@ public abstract class DefProcessAdaptor implements ProcessIF {
                 }
     
                 if (cnt > NDCommon.SO_TRANS_CHECK_ITER) {
-                  throw new Exception(
-                    "Abnormal client socket disconnect  - No Response");
+                  throw new Exception("Abnormal client socket disconnect  - No Response");
                }
     
                 Thread.sleep(NDCommon.SO_TRANS_SLEEP);

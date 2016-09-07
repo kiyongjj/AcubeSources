@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>REQUBE REPORT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<script language="JavaScript">
+function OnRun()
+{
+	try
+	{
+		RQViewer.Stop();
+	}
+	catch(err)
+	{
+		alert("뷰어가 설치되지 않았습니다.");
+		return;
+	}
+	alert("뷰어가 정상적으로 설치되었습니다.");
+	self.close();
+}
+</script>
+</head>
+<body marginheight="0" marginwidth="0" leftmargin="0" topmargin="0" onload="OnRun()">
+<p align="center">
+<script language="javascript" src="../setup/rqviewer.js"></script>
+</p>
+</body>
+</html>
