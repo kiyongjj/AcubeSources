@@ -679,7 +679,7 @@ public abstract class DefProcessAdaptor implements ProcessIF {
 
       try {
          if (NDConstant.NDISC_NA_RESERV.equals(strDate)) {
-            strRet = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+            strRet = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
          } else {
             strRet = strDate;
          }

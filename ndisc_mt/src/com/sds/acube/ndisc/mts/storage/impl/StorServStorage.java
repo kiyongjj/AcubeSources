@@ -58,7 +58,7 @@ public class StorServStorage extends DefStorageAdaptor {
 	}
 
 	
-	//���� ��..StorServ DB ��Ű������ max_size , size �÷��� �������� ����
+	//占쏙옙占쏙옙 占쏙옙..StorServ DB 占쏙옙키占쏙옙占쏙옙占쏙옙 max_size , size 占시뤄옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙
 	private String[] getStorage4Regist(NFile nFile) throws Exception {
 		Media[] medias = null;
 		int volumeID = -1;
@@ -229,7 +229,7 @@ public class StorServStorage extends DefStorageAdaptor {
 	//===========================================================================================
 	
 	/* 
-	 * [��ü volume ���� ����Ʈ ��ȯ]
+	 * [占쏙옙체 volume 占쏙옙占쏙옙 占쏙옙占쏙옙트 占쏙옙환]
 	 */
 	public List selectVolumeInfoList() throws Exception {
 		VolumeDAO dao = null;
@@ -251,7 +251,7 @@ public class StorServStorage extends DefStorageAdaptor {
 	}
 	
 	
-	//Volume ���� ��ȯ
+	//Volume 占쏙옙占쏙옙 占쏙옙환
 	public Volume selectVolumeInfo(int volumeId) throws Exception {
 		VolumeDAO dao = null;
 		Volume volume = null;
@@ -281,7 +281,7 @@ public class StorServStorage extends DefStorageAdaptor {
 	
 	//==========================================================================================
 	
-	//��ü Media ���� ����Ʈ ��ȯ
+	//占쏙옙체 Media 占쏙옙占쏙옙 占쏙옙占쏙옙트 占쏙옙환
 	public List selectMediaInfoList() throws Exception {
 		MediaDAO dao = null;
 		List mediaList = null;
@@ -302,7 +302,7 @@ public class StorServStorage extends DefStorageAdaptor {
 	}
 	
 	
-	//Media ���� ��ȯ
+	//Media 占쏙옙占쏙옙 占쏙옙환
 	public Media selectMediaInfo(int mediaId) throws Exception {
 		MediaDAO dao = null;
 		Media media = null;
@@ -324,7 +324,7 @@ public class StorServStorage extends DefStorageAdaptor {
 	
 	//======================================================================================
 	
-	//��ü File ���� ����Ʈ ��ȯ
+	//占쏙옙체 File 占쏙옙占쏙옙 占쏙옙占쏙옙트 占쏙옙환
 	public List selectFileInfoList() throws Exception {
 		FileDAO dao = null;
 		List fileList = null;
@@ -345,7 +345,7 @@ public class StorServStorage extends DefStorageAdaptor {
 	}
 	
 	
-	//File ���� ��ȯ
+	//File 占쏙옙占쏙옙 占쏙옙환
 	public NFile selectFileInfo(String fileId) throws Exception {
 		FileDAO dao = null;
 		NFile file = null;
@@ -399,9 +399,9 @@ public class StorServStorage extends DefStorageAdaptor {
 	}
 
 	 /*
-	 * 2009.04.30 ������
-	 * STORServ DB ��Ű�� ������ ���ٱ���  ������ R(Read):8 C(Create):4 U(Update):2 D(Delete):1 �� ���� ���� ������ ���� �ȴ�.   
-	 * NDISC ������ ���ٱ��� ������ �ܼ��� RCUD �� ������ �Է��ϹǷ� �̸� �����Ǵ� ���� ������ �����Ͽ� DB�� �Է��ϵ��� �����Ѵ�.
+	 * 2009.04.30 占쏙옙占쏙옙占쏙옙
+	 * STORServ DB 占쏙옙키占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쌕깍옙占쏙옙  占쏙옙占쏙옙占쏙옙 R(Read):8 C(Create):4 U(Update):2 D(Delete):1 占쏙옙 占쏙옙占쏙옙 占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙 占싫댐옙.   
+	 * NDISC 占쏙옙占쏙옙占쏙옙 占쏙옙占쌕깍옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쌤쇽옙占쏙옙 RCUD 占쏙옙 占쏙옙占쏙옙占쏙옙 占쌉뤄옙占싹므뤄옙 占싱몌옙 占쏙옙占쏙옙占실댐옙 占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占싹울옙 DB占쏙옙 占쌉뤄옙占싹듸옙占쏙옙 占쏙옙占쏙옙占싼댐옙.
 	 */ 
 	public void insertNewVolumeToDB(Volume volume) throws Exception {
 		VolumeDAO dao = null;

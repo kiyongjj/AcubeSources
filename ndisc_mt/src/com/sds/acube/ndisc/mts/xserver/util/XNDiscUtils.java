@@ -161,7 +161,7 @@ public class XNDiscUtils {
 		String strRet = null;
 		try {
 			if (XNDiscConfig.NDISC_NA_RESERV.equals(date)) {
-				strRet = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+				strRet = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 			} else {
 				strRet = date;
 			}

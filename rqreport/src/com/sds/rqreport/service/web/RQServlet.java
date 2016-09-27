@@ -38,6 +38,7 @@ public class RQServlet extends HttpServlet {
 		// input code 
 		HttpSession session = request.getSession(true);
 		String cmd = request.getParameter("cmd");
+
 		if(cmd != null){
 			if(cmd.equals("svrver")){
 				
@@ -138,7 +139,7 @@ public class RQServlet extends HttpServlet {
 			while((readcount = decoder.read(buffer)) != -1){
 				baos.write(buffer, 0, readcount);
 			}
-			
+
 			byte[] lm_decBytes = null;
 			
 			ifsentence :

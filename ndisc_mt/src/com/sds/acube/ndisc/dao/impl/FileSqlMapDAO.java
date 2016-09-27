@@ -65,7 +65,7 @@ public class FileSqlMapDAO extends BaseSqlMapDAO implements FileDAO {
 				nFile.setId(new RandomGUID().toString());
 			}
 			if (null == nFile.getCreatedDate()) {
-				nFile.setCreatedDate(new SimpleDateFormat("yyyyMMddhhmmss").format(new Date()));
+				nFile.setCreatedDate(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
 			}
 			rtn = update("saveFile", nFile); //@add 2014.02.17
 			//if (null == dbSchemaType || !(dbSchemaType.equalsIgnoreCase("storserv"))) {
@@ -113,7 +113,7 @@ public class FileSqlMapDAO extends BaseSqlMapDAO implements FileDAO {
 		int rtn = -1; //@add 2014.02.17
 		try {
 			if (null == nFile.getModifiedDate()) {
-				nFile.setModifiedDate(new SimpleDateFormat("yyyyMMddhhmmss").format(new Date()));
+				nFile.setModifiedDate(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
 			}
 			NFile formerFile = null;
 			//if (null == dbSchemaType || !(dbSchemaType.equalsIgnoreCase("storserv"))) {

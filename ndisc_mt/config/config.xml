@@ -126,7 +126,7 @@
 <!-- 2014.04.01 START -->
  <category name="options">
  	<!-- 전송형태 지정 (X : xsocket transfer, M : mapped byte buffer, S : socket fully read, write -->
- 	<property name="transfer_type" value="M" />
+ 	<property name="transfer_type" value="S" />
 	<!-- xsocket debug -->
 	<property name="xsocket_debug" value="true" />
  	<!-- SSL 사용여부 (주의사항 XNApi에도 SSL 설정이 되어야함) -->

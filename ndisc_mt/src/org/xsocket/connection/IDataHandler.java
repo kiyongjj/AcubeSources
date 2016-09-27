@@ -42,7 +42,7 @@ import org.xsocket.MaxReadSizeExceededException;
  * be bundled into one TCP packet. <br><br>
  *
  * Performing a write operation like <code>connection.write("hello it's me. What I have to say is.")</code>
- * on the client side doesn�t mean that exact one onData call occurs on
+ * on the client side doesn占퐐 mean that exact one onData call occurs on
  * the server side.  A common pattern to solve this is to identify logical
  * parts by a delimiter or a leading length field.
  * xSocket provides methods to support this pattern. E.g. the {@link INonBlockingConnection#readStringByDelimiter(String)}
@@ -51,7 +51,7 @@ import org.xsocket.MaxReadSizeExceededException;
  * contrast to {@link IBlockingConnection}, a {@link INonBlockingConnection} read
  * method always returns immediately and could thrown a BufferUnderflowException.
  * The {@link BufferUnderflowException} will be swallowed by the framework, if
- * the DataHandler doesn�t catch this exception. It is a common pattern
+ * the DataHandler doesn占퐐 catch this exception. It is a common pattern
  * not to handle such an exception by the DataHandler.
  *
  * <pre>

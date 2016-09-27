@@ -1,5 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
+<%@ page import="com.sds.rqreport.*" %>
 <%@ page import="com.sds.rqreport.util.*" %>
+<%@ page import="java.util.*" %>
+<%@ page import="java.text.*" %>
+<%@ page import="java.io.*" %>
 <%//@ taglib uri="/WEB-INF/tld/RQUser.tld" prefix="rquser" %>
 <%
 /**
@@ -31,7 +35,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 String lm_doc = request.getParameter("doc");
 String doc = new String(lm_doc.getBytes(lm_serverCharset), lm_RQCharset);
 String lm_runvar = request.getParameter("runvar");
+/* System.out.println("Kiyong TEST contextname ::: " + contextname);
+System.out.println("Kiyong TEST basePath ::: " + basePath);
+System.out.println("Kiyong TEST lm_doc ::: " + lm_doc);
+System.out.println("Kiyong TEST doc ::: " + doc); */
 String runvar;
+
 if(lm_runvar != null){
 	runvar = new String(lm_runvar.getBytes(lm_serverCharset), lm_RQCharset);
 }else{
@@ -43,7 +52,52 @@ if(action == null){
 	action = "getRsDB";
 }
 String jndiname = request.getParameter("jndiname");
+
+
+//////////////////////////////////////////////////////////////
+// pdf modify 20160926
+ System.out.println("call !!!");
+ Environment env = Environment.getInstance(); 
+ String baseDir = "D:/kiyongjj";
+ String makeDir = "";
+ Date now = new Date();
+ SimpleDateFormat formatYYYY = new SimpleDateFormat("yyyy");
+ SimpleDateFormat formatMM = new SimpleDateFormat("MM");
+ SimpleDateFormat formatDD = new SimpleDateFormat("dd");
+ 
+ String year = formatYYYY.format(now); 
+ String month = formatMM.format(now); 
+ String day = formatDD.format(now); 
+ 
+ makeDir = baseDir + "/" + year;
+ makeDir(makeDir); 
+ 
+ makeDir = makeDir + "/" + month;
+ makeDir(makeDir); 
+
+ makeDir = makeDir +  "/" + day;
+ makeDir(makeDir);  
+ 
+ System.out.println(" makeDir >> "+ makeDir);
+ 
+ UUID uuid = UUID.randomUUID();
+ String strFileName = uuid.toString().replace("-", "");
+ System.out.println("Kiyong TEST strFileName :::: " + strFileName);
+ /* String strCDate = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+ String strYear = strCDate.substring(0, 4);
+ String strMonth = strCDate.substring(4, 6);
+ String strDay = strCDate.substring(6, 8);
+ System.out.println("Kiyong TEST strCDate ::: " + strCDate);
+ System.out.println("Kiyong TEST strYear ::: " + strYear);
+ System.out.println("Kiyong TEST strMonth ::: " + strMonth);
+ System.out.println("Kiyong TEST strDay ::: " + strDay); */
+ //String pdfFile = "D:\\dev\\git_repository\\AcubeSources\\rqreport\\WebContent\\temp_pdf\\" + strFileName;
+ System.out.println("Kiyong TEST pdfFile ::: " + makeDir + strFileName);
+ System.out.println("Kiyong TEST env.logrqdirname ::: " + env.logrqdirname.replace("logs", ""));
+ String fileRealName = makeDir + "/" + strFileName;
+ 
 %>
+	 
 <HTML>
 <HEAD>
 <META http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -101,8 +155,7 @@ function OnRun() {
 		else
 		{
 			try
-			{	
-			//	alert("Kiyong TEST docName :: " + docName);
+			{
 				// Repository Directory use 
 			    oReport = RQViewer.OpenReport("<%=basePath%>document/getreport.jsp?doc=" + docName);
 			    //oReport = RQViewer.OpenReport("<%=basePath%>document/getreport.jsp?getType=rqv&doc=" + docName);
@@ -175,9 +228,8 @@ function OnRun() {
 				oDataSet.SetDataSetType(oConnObj.GetResponseType());
 			}
 		}
-		//PDFSaveToServer(LPCTSTR serverFile, LPCTSTR strFileName, LPCTSTR strServerIP, LPCTSTR strServerPort, BOOL bAlert, LPCTSTR strID, LPCTSTR strPW)
-		//PDFSaveToServer(docName, docName, localhost, 8080, true, reqube, reqube);
 		//---문서실행------------------------------------------------------------------------------------------
+		
 		RQViewer.Run();
 
 	<% }else{ %>
@@ -267,14 +319,21 @@ function RQ_ExcuteHyperLink(url,target,option){
 	window.open(url,target,option);
 }
 </SCRIPT>
+
 <% if(viewer_type.equals("ocx")){ %>
 <!-- 이벤트 설정 -->
 <script language="JavaScript" for="RQViewer" event="EmptyResultData">
 	//alert("EmptyResultData");
 </script>
-
 <script language="JavaScript" for="RQViewer" event="EndRunReport">
-	//RQViewer.SendToExcel("C:/test.xls",true,0,true);
+//	alert("리포트 실행이 완료되었습니다.");
+
+//	RQViewer.SendToPDF("D:/"+docName+".PDF", true);
+//	RQViewer.SendToExcel("D:/test.xls",true,0,true);
+		//RQViewer.PDFSaveToServer(LPCTSTR serverFile, LPCTSTR strFileName, LPCTSTR strServerIP, LPCTSTR strServerPort, BOOL bAlert, LPCTSTR strID, LPCTSTR strPW)
+		//RQViewer.PDFSaveToServer(serverFile, docName, localhost, 8080, true, "reqube", "reqube");
+		
+	RQViewer.PDFSaveToServer("", "<%= fileRealName%>", "localhost", "8080", true, "admin", "admin");
 	////// Document Statistics ///////////////////////////
 	//viewerPage = new rqviewer.viewerPage();
 	//viewerPage.invokeServ(RQViewer.GetRunTimeInfo());
@@ -322,3 +381,24 @@ function eventRefresh()
 </BODY>
 </HTML>
 
+
+<%!
+public boolean makeDir(String dirPath) {
+	  boolean rtnVal = false;
+	  File dir = new File(dirPath); 
+	  try{
+	   if(!dir.isDirectory()){
+	    dir.mkdir();
+	   }
+	   
+	   rtnVal = true;
+	  }
+	  catch(Exception e){
+	   System.out.println("Error : "+ e.toString());
+	   rtnVal = false;
+	  }
+	  
+	  return rtnVal;
+	 }
+	  
+%>

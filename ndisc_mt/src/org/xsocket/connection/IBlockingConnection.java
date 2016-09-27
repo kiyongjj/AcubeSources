@@ -404,7 +404,7 @@ public interface IBlockingConnection extends IConnection, IDataSource, IDataSink
 	 * @param maxLength   the max length of bytes that should be read. If the limit is exceeded a MaxReadSizeExceededException will been thrown	 
 	 * @return the ByteBuffer
 	 * @throws BufferUnderflowException If not enough data is available 
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found     
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found     
 	 * @throws IOException If some other I/O error occurs
 	 */
 	ByteBuffer[] readByteBufferByDelimiter(String delimiter, String encoding, int maxLength) throws IOException, BufferUnderflowException, MaxReadSizeExceededException, SocketTimeoutException;
@@ -438,7 +438,7 @@ public interface IBlockingConnection extends IConnection, IDataSource, IDataSink
 	 * @param maxLength   the max length of bytes that should be read. If the limit is exceeded a MaxReadSizeExceededException will been thrown
 	 * @return the read bytes
 	 * @throws BufferUnderflowException If not enough data is available 
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found 	
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found 	
 	 * @throws IOException If some other I/O error occurs
 	 */
 	byte[] readBytesByDelimiter(String delimiter, String encoding, int maxLength) throws IOException, BufferUnderflowException, MaxReadSizeExceededException, SocketTimeoutException;
@@ -452,7 +452,7 @@ public interface IBlockingConnection extends IConnection, IDataSource, IDataSink
 	 * @param delimiter   the delimiter
 	 * @param encoding    the encoding to use
 	 * @return the string
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found   
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found   
 	 * @throws IOException If some other I/O error occurs
 	 * @throws BufferUnderflowException If not enough data is available 
  	 * @throws UnsupportedEncodingException if the given encoding is not supported 
@@ -469,7 +469,7 @@ public interface IBlockingConnection extends IConnection, IDataSource, IDataSink
 	 * @param maxLength   the max length of bytes that should be read. If the limit is exceeded a MaxReadSizeExceededException will been thrown
 	 * @return the string
 	 * @throws BufferUnderflowException If not enough data is available 
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found 	 * @throws ClosedConnectionException If the underlying socket is already closed
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found 	 * @throws ClosedConnectionException If the underlying socket is already closed
 	 * @throws IOException If some other I/O error occurs
  	 * @throws UnsupportedEncodingException If the given encoding is not supported
 	 */

@@ -21,6 +21,8 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.xsocket.connection.BlockingConnectionPool;
 import org.xsocket.connection.IBlockingConnection;
+import org.xsocket.connection.multiplexed.IBlockingPipeline;
+import org.xsocket.connection.multiplexed.IMultiplexedConnection;
 
 import com.sds.acube.cache.CacheConfig;
 import com.sds.acube.cache.iface.ICache;
@@ -55,13 +57,13 @@ public class XNApiBase {
 	protected static boolean CON_FAILOVER_STATE;
 
 	/* Multiplexing connection 객체 */
-	//protected IMultiplexedConnection mxconnection;
+	protected IMultiplexedConnection mxconnection;
 	
 	/* Blocking pipeline 객체 */
-	//protected IBlockingPipeline connection;
+	protected IBlockingPipeline connection;
 	
 	/* Multiplexing이 아닌 일반 Multi-Thread 방식일 경우 */
-	protected IBlockingConnection connection;
+	//protected IBlockingConnection connection;
 
 	/* Multiplexing이 아닌 일반 Multi-Thread 방식일 경우 */
 	protected BlockingConnectionPool pool;	

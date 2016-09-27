@@ -485,7 +485,7 @@ public abstract class AbstractNonBlockingStream implements WritableByteChannel, 
 	 * @param delimiter   the delimiter
 	 * @param maxLength   the max length of bytes that should be read. If the limit is exceeded a MaxReadSizeExceededException will been thrown	 
 	 * @return the ByteBuffer
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found     
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found     
 	 * @throws IOException If some other I/O error occurs
  	 * @throws BufferUnderflowException if not enough data is available	 
  	 * @throws ClosedChannelException If the stream is closed   
@@ -504,7 +504,7 @@ public abstract class AbstractNonBlockingStream implements WritableByteChannel, 
 	 * @param delimiter   the delimiter
 	 * @param encoding    the delimiter encoding
 	 * @return the ByteBuffer
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found     
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found     
 	 * @throws IOException If some other I/O error occurs
  	 * @throws BufferUnderflowException if not enough data is available 
  	 * @throws ClosedChannelException If the stream is closed   
@@ -524,7 +524,7 @@ public abstract class AbstractNonBlockingStream implements WritableByteChannel, 
 	 * @param encoding    the delimiter encoding
 	 * @param maxLength   the max length of bytes that should be read. If the limit is exceeded a MaxReadSizeExceededException will been thrown	 
 	 * @return the ByteBuffer
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found     
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found     
 	 * @throws IOException If some other I/O error occurs
  	 * @throws BufferUnderflowException if not enough data is available 
  	 * @throws ClosedChannelException If the stream is closed  
@@ -626,7 +626,7 @@ public abstract class AbstractNonBlockingStream implements WritableByteChannel, 
 	 * @param delimiter   the delimiter
 	 * @param maxLength   the max length of bytes that should be read. If the limit is exceeded a MaxReadSizeExceededException will been thrown
 	 * @return the read bytes
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found 	 
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found 	 
 	 * @throws IOException If some other I/O error occurs
  	 * @throws BufferUnderflowException if not enough data is available 
  	 * @throws ClosedChannelException If the stream is closed   
@@ -645,7 +645,7 @@ public abstract class AbstractNonBlockingStream implements WritableByteChannel, 
 	 * @param delimiter   the delimiter
 	 * @param encoding    the delimiter encoding
 	 * @return the read bytes
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found 	 
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found 	 
 	 * @throws IOException If some other I/O error occurs
  	 * @throws BufferUnderflowException if not enough data is available 
  	 * @throws ClosedChannelException If the stream is closed   
@@ -665,7 +665,7 @@ public abstract class AbstractNonBlockingStream implements WritableByteChannel, 
 	 * @param encoding    the delimiter encoding
 	 * @param maxLength   the max length of bytes that should be read. If the limit is exceeded a MaxReadSizeExceededException will been thrown
 	 * @return the read bytes
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found 	 
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found 	 
 	 * @throws IOException If some other I/O error occurs
  	 * @throws BufferUnderflowException if not enough data is available
  	 * @throws ClosedChannelException If the stream is closed    
@@ -714,7 +714,7 @@ public abstract class AbstractNonBlockingStream implements WritableByteChannel, 
 	 * @param delimiter   the delimiter
 	 * @param maxLength   the max length of bytes that should be read. If the limit is exceeded a MaxReadSizeExceededException will been thrown
 	 * @return the string
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found 	 
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found 	 
 	 * @throws IOException If some other I/O error occurs
  	 * @throws UnsupportedEncodingException If the given encoding is not supported
  	 * @throws BufferUnderflowException if not enough data is available
@@ -732,7 +732,7 @@ public abstract class AbstractNonBlockingStream implements WritableByteChannel, 
 	 * @param delimiter   the delimiter
 	 * @param encoding    the encoding
 	 * @return the string
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found 	 
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found 	 
 	 * @throws IOException If some other I/O error occurs
  	 * @throws UnsupportedEncodingException If the given encoding is not supported
  	 * @throws BufferUnderflowException if not enough data is available
@@ -751,7 +751,7 @@ public abstract class AbstractNonBlockingStream implements WritableByteChannel, 
 	 * @param encoding    the encoding 
 	 * @param maxLength   the max length of bytes that should be read. If the limit is exceeded a MaxReadSizeExceededException will been thrown
 	 * @return the string
-	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn�t been found 	 
+	 * @throws MaxReadSizeExceededException If the max read length has been exceeded and the delimiter hasn占퐐 been found 	 
 	 * @throws IOException If some other I/O error occurs
  	 * @throws UnsupportedEncodingException If the given encoding is not supported
  	 * @throws BufferUnderflowException if not enough data is available

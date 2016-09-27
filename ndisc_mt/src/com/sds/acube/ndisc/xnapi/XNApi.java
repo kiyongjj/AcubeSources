@@ -37,6 +37,8 @@ import org.xsocket.connection.NonBlockingConnection;
 import org.xsocket.connection.NonBlockingConnectionPool;
 //import org.xsocket.connection.multiplexed.MultiplexedConnection;
 
+import org.xsocket.connection.multiplexed.MultiplexedConnection;
+
 import com.sds.acube.cache.CacheUtil;
 import com.sds.acube.ndisc.common.exception.FileException;
 import com.sds.acube.ndisc.common.exception.NDiscException;
@@ -1156,19 +1158,18 @@ public class XNApi extends XNApiBase {
 			}
 
 			if (useSSL) {
-				// mxconnection = new MultiplexedConnection(new NonBlockingConnection(ia, PORT, XNApiSSLUtils.getSSLContext(), true));
-				connection = pool.getBlockingConnection(ia, PORT, true);
+				mxconnection = new MultiplexedConnection(new NonBlockingConnection(ia, PORT, XNApiSSLUtils.getSSLContext(), true));
+				// connection = pool.getBlockingConnection(ia, PORT, true);
 			} else {
-				// mxconnection = new MultiplexedConnection(new NonBlockingConnection(ia, PORT));
-				connection = pool.getBlockingConnection(ia, PORT);
+				mxconnection = new MultiplexedConnection(new NonBlockingConnection(ia, PORT));
+				// connection = pool.getBlockingConnection(ia, PORT);
 			}
 
 			/* Multiplexing이 아닌 일반 Multi-Thread 방식일 경우 */
+			//connection = ConnectionUtils.synchronizedConnection(connection);
 
-			connection = ConnectionUtils.synchronizedConnection(connection);
-
-			// String pipelineId = mxconnection.createPipeline();
-			// connection = mxconnection.getBlockingPipeline(pipelineId);
+			 String pipelineId = mxconnection.createPipeline();
+			 connection = mxconnection.getBlockingPipeline(pipelineId);
 			connection.setFlushmode(FlushMode.ASYNC);
 			connection_port = connection.getLocalPort();
 			if (debug) {
